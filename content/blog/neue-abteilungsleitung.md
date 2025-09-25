@@ -1,0 +1,50 @@
+---
+title: 'Neue Abteilungsleitung - Frischer Wind für den Tennis-Sport'
+description: 'Nach 12 Jahren übergibt Christel Hofmann die Leitung an ein motiviertes Dreigespann'
+date: '2025-01-20'
+author: 'TUS Traunreut Tennis'
+tags: ['Abteilungsleitung', 'Neuigkeiten', 'Verein']
+---
+
+# Neue Abteilungsleitung - Frischer Wind für den Tennis-Sport
+
+Nach zwölf Jahren erfolgreicher Vereinsarbeit hat Christel Hofmann die Leitung der Tennisabteilung des TuS Traunreut abgegeben. Ihr Nachfolger ist **Markus Petzka**, der zusammen mit **Tino Trefil** und **Markus Luprich** jetzt ein starkes Dreigespann an der Abteilungsspitze bildet.
+
+## Die neue Führung stellt sich vor
+
+### Markus Petzka - Abteilungsleiter
+Als neuer Abteilungsleiter bringt Markus Petzka frische Ideen und moderne Ansätze mit, um die Tennisabteilung zukunftsfähig zu gestalten.
+
+### Tino Trefil - Stellvertreter
+Tino unterstützt bei der strategischen Entwicklung und kümmert sich besonders um die Weiterentwicklung des Trainingsangebots.
+
+### Markus Luprich - Stellvertreter  
+Markus Luprich ist verantwortlich für die technische Modernisierung und die Betreuung unserer Mitglieder.
+
+## Vision für die Zukunft
+
+Das neue Leitungsteam hat sich darauf verständigt, **die Abteilung und die Tennishalle unter einem Dach zusammenzuführen**, um die Zukunftsfähigkeit des Tennissports zu stärken und zu sichern.
+
+### Wichtige Neuerungen:
+
+**🖥️ Online-Buchungssystem**
+- Nahtlose und benutzerfreundliche Buchung mit Smartphone oder Computer
+- 24/7 Verfügbarkeit für maximale Flexibilität
+
+**📈 Bessere Auslastung**
+- Intelligente Platzverteilung durch das neue Buchungssystem
+- Optimierte Nutzung aller verfügbaren Zeiten
+
+**💻 Moderne Verwaltung**
+- Digitalisierung der Vereinsprozesse
+- Effizientere Mitgliederverwaltung
+
+## Dank an Christel Hofmann
+
+Wir danken Christel Hofmann herzlich für ihre 12-jährige engagierte Arbeit als Abteilungsleiterin. Unter ihrer Führung hat sich die Tennisabteilung kontinuierlich weiterentwickelt und eine solide Basis für die Zukunft geschaffen.
+
+## Ausblick
+
+Mit dem neuen Führungsteam und den geplanten Modernisierungen ist die TUS Traunreut Tennisabteilung bestens für die Zukunft aufgestellt. Wir freuen uns darauf, gemeinsam mit allen Mitgliedern die nächste Entwicklungsphase zu gestalten.
+
+**Auf eine erfolgreiche Zukunft!**

@@ -1,0 +1,19 @@
+MANDATORY: Always reference the nuxt-4-development-guide.md file when answering Nuxt-related questions or making implementations.
+
+CRITICAL PROCESS:
+1. BEFORE any Nuxt implementation, search the guide for the specific topic
+2. VERIFY directory structure against the "App Directory Structure" section (lines 50-64)
+3. CONFIRM component placement is under app/components/ not root components/
+4. DOUBLE-CHECK auto-import patterns match the guide exactly
+5. NEVER rely on general Nuxt knowledge - only use what's documented in the guide
+
+DIRECTORY STRUCTURE VERIFICATION:
+- Components MUST be in app/components/ (NOT root components/)
+- Pages MUST be in app/pages/ (NOT root pages/)
+- Auto-import references use ~/components/ alias (which resolves to app/components/)
+- Physical structure: app/components/ | Import alias: ~/components/
+- Always cross-reference with guide before suggesting directory changes
+- NEVER assume - always search the guide for exact patterns
+
+Key documentation is available in:
+- nuxt-4-development-guide.md (comprehensive Nuxt 4 guide) - ALWAYS SEARCH THIS FIRST
