@@ -1,36 +1,66 @@
 <template>
-  <header class="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
     <UContainer>
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
-        <div class="flex items-center space-x-3">
-          <Icon name="heroicons:trophy" class="w-8 h-8 text-green-600" />
+        <NuxtLink to="/" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+          <Icon name="heroicons:trophy" class="w-8 h-8" style="color: var(--tennis-green)" />
           <div>
-            <h1 class="text-xl font-bold text-gray-900 dark:text-white">TUS Traunreut</h1>
-            <p class="text-xs text-gray-500 dark:text-gray-400">Tennis</p>
+            <h1 class="text-xl font-bold" style="color: var(--tennis-green-dark)">TUS Traunreut</h1>
+            <p class="text-xs" style="color: var(--tennis-orange)">Tennis</p>
           </div>
-        </div>
+        </NuxtLink>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center space-x-8">
-          <UButton variant="ghost" color="gray" @click="scrollToSection('home')">
+        <nav class="hidden md:flex items-center space-x-6">
+          <NuxtLink 
+            to="/" 
+            class="px-3 py-2 text-sm font-medium transition-colors hover:text-orange-500"
+            :class="$route.path === '/' ? 'text-orange-600 font-semibold' : 'text-gray-700'"
+          >
             Home
-          </UButton>
-          <UButton variant="ghost" color="gray" @click="scrollToSection('department')">
-            Abteilung
-          </UButton>
-          <UButton variant="ghost" color="gray" @click="scrollToSection('facilities')">
-            Anlagen
-          </UButton>
-          <UButton variant="ghost" color="gray" @click="scrollToSection('training')">
-            Training
-          </UButton>
-          <UButton variant="ghost" color="gray" @click="scrollToSection('news')">
+          </NuxtLink>
+          <NuxtLink 
+            to="/abteilung" 
+            class="px-3 py-2 text-sm font-medium transition-colors hover:text-orange-500"
+            :class="$route.path === '/abteilung' ? 'text-orange-600 font-semibold' : 'text-gray-700'"
+          >
+            Abteilungsleitung
+          </NuxtLink>
+          <NuxtLink 
+            to="/training" 
+            class="px-3 py-2 text-sm font-medium transition-colors hover:text-orange-500"
+            :class="$route.path === '/training' ? 'text-orange-600 font-semibold' : 'text-gray-700'"
+          >
+            Trainingsangebot
+          </NuxtLink>
+          <NuxtLink 
+            to="/anlagen" 
+            class="px-3 py-2 text-sm font-medium transition-colors hover:text-orange-500"
+            :class="$route.path === '/anlagen' ? 'text-orange-600 font-semibold' : 'text-gray-700'"
+          >
+            Tennisplätze
+          </NuxtLink>
+          <NuxtLink 
+            to="/aktuelles" 
+            class="px-3 py-2 text-sm font-medium transition-colors hover:text-orange-500"
+            :class="$route.path === '/aktuelles' ? 'text-orange-600 font-semibold' : 'text-gray-700'"
+          >
             Aktuelles
-          </UButton>
-          <UButton color="green" @click="scrollToSection('booking')">
+          </NuxtLink>
+          <NuxtLink 
+            to="/mitglieder" 
+            class="px-3 py-2 text-sm font-medium transition-colors hover:text-orange-500"
+            :class="$route.path === '/mitglieder' ? 'text-orange-600 font-semibold' : 'text-gray-700'"
+          >
+            Mitglieder
+          </NuxtLink>
+          <NuxtLink 
+            to="/booking" 
+            class="btn-tennis-secondary ml-4"
+          >
             Jetzt Buchen
-          </UButton>
+          </NuxtLink>
         </nav>
 
         <!-- Mobile Menu Button -->
@@ -45,26 +75,29 @@
       </div>
 
       <!-- Mobile Menu -->
-      <div v-if="mobileMenuOpen" class="md:hidden py-4 border-t border-gray-200 dark:border-gray-800">
+      <div v-if="mobileMenuOpen" class="md:hidden py-4 border-t border-gray-200">
         <nav class="flex flex-col space-y-2">
-          <UButton variant="ghost" color="gray" class="justify-start" @click="scrollToSection('home')">
+          <NuxtLink to="/" class="px-3 py-2 text-gray-700 hover:text-orange-500" @click="mobileMenuOpen = false">
             Home
-          </UButton>
-          <UButton variant="ghost" color="gray" class="justify-start" @click="scrollToSection('department')">
-            Abteilung
-          </UButton>
-          <UButton variant="ghost" color="gray" class="justify-start" @click="scrollToSection('facilities')">
-            Anlagen
-          </UButton>
-          <UButton variant="ghost" color="gray" class="justify-start" @click="scrollToSection('training')">
-            Training
-          </UButton>
-          <UButton variant="ghost" color="gray" class="justify-start" @click="scrollToSection('news')">
+          </NuxtLink>
+          <NuxtLink to="/abteilung" class="px-3 py-2 text-gray-700 hover:text-orange-500" @click="mobileMenuOpen = false">
+            Abteilungsleitung
+          </NuxtLink>
+          <NuxtLink to="/training" class="px-3 py-2 text-gray-700 hover:text-orange-500" @click="mobileMenuOpen = false">
+            Trainingsangebot
+          </NuxtLink>
+          <NuxtLink to="/anlagen" class="px-3 py-2 text-gray-700 hover:text-orange-500" @click="mobileMenuOpen = false">
+            Tennisplätze
+          </NuxtLink>
+          <NuxtLink to="/aktuelles" class="px-3 py-2 text-gray-700 hover:text-orange-500" @click="mobileMenuOpen = false">
             Aktuelles
-          </UButton>
-          <UButton color="green" class="justify-start" @click="scrollToSection('booking')">
+          </NuxtLink>
+          <NuxtLink to="/mitglieder" class="px-3 py-2 text-gray-700 hover:text-orange-500" @click="mobileMenuOpen = false">
+            Mitglieder
+          </NuxtLink>
+          <NuxtLink to="/booking" class="btn-tennis-secondary mx-3 mt-2" @click="mobileMenuOpen = false">
             Jetzt Buchen
-          </UButton>
+          </NuxtLink>
         </nav>
       </div>
     </UContainer>
@@ -72,26 +105,12 @@
 </template>
 
 <script setup>
+// Mobile menu state
 const mobileMenuOpen = ref(false)
 
-const scrollToSection = (sectionId) => {
+// Close mobile menu when route changes
+const route = useRoute()
+watch(() => route.path, () => {
   mobileMenuOpen.value = false
-  
-  if (sectionId === 'home') {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-    return
-  }
-  
-  const element = document.getElementById(sectionId)
-  if (element) {
-    const headerOffset = 80
-    const elementPosition = element.getBoundingClientRect().top
-    const offsetPosition = elementPosition + window.pageYOffset - headerOffset
-    
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth'
-    })
-  }
-}
+})
 </script>

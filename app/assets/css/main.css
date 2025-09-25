@@ -9,11 +9,77 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #fafafa;
+}
+
+/* Tennis Club Color Theme - Based on TUS Traunreut */
+:root {
+  --tennis-green-dark: #1a5f3f;
+  --tennis-green: #2d7a4f;
+  --tennis-green-light: #4ade80;
+  --tennis-orange: #f97316;
+  --tennis-orange-light: #fb923c;
+  --tennis-orange-dark: #ea580c;
+  --tennis-gray-light: #f8fafc;
+  --tennis-gray: #64748b;
+  --tennis-gray-dark: #334155;
 }
 
 /* Custom application styles */
 .tennis-gradient {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, var(--tennis-green) 0%, var(--tennis-green-dark) 100%);
+}
+
+.tennis-orange-gradient {
+  background: linear-gradient(135deg, var(--tennis-orange) 0%, var(--tennis-orange-dark) 100%);
+}
+
+/* Tennis-themed button styles */
+.btn-tennis-primary {
+  background: var(--tennis-green);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-tennis-primary:hover {
+  background: var(--tennis-green-dark);
+  transform: translateY(-1px);
+}
+
+.btn-tennis-secondary {
+  background: var(--tennis-orange);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-tennis-secondary:hover {
+  background: var(--tennis-orange-dark);
+  transform: translateY(-1px);
+}
+
+/* Tennis section styling */
+.tennis-section {
+  padding: 4rem 0;
+}
+
+.tennis-card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tennis-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 /* Ensure proper responsive behavior */
