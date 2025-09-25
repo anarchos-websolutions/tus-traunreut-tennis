@@ -7,7 +7,7 @@
           <h1 class="title-hero mb-6">
             TENNIS IM TUS TRAUNREUT
           </h1>
-          <div class="w-32 h-1 bg-orange-500 mx-auto mb-6"></div>
+          <div class="w-32 h-1 bg-gray-900 mx-auto mb-6"></div>
             <p class="text-body-lg-dark mb-8">
               der Turn- und Sportverein im Herzen des Chiemgaus
             </p>
@@ -32,12 +32,12 @@
             <Icon name="heroicons:calendar-days" class="w-12 h-12 mx-auto mb-4" style="color: var(--tennis-green)" />
             <h3 class="title mb-2">Nächster Termin</h3>
             <p class="text-body mb-4">Alle Termine anzeigen...</p>
-            <p class="text-orange-600 font-medium">Keine Termine gefunden</p>
+            <p class="text-gray-900 font-medium">Keine Termine gefunden</p>
           </div>
 
           <!-- Tennis Department -->
           <div class="tennis-card p-6 text-center">
-            <Icon name="heroicons:trophy" class="w-12 h-12 mx-auto mb-4" style="color: var(--tennis-orange)" />
+            <Icon name="heroicons:trophy" class="w-12 h-12 mx-auto mb-4" style="color: var(--tennis-secondary)" />
             <h3 class="title mb-2">TuS Tennisabteilung</h3>
             <p class="text-body mb-4">Die TuS-Tennisabteilung wünscht viel Glück und ein gesundes, verletzungsfreies Jahr 2025.</p>
             <NuxtLink to="/abteilung" class="text-green-600 hover:text-green-700 font-medium">
@@ -64,16 +64,16 @@
         <div class="text-center mb-12">
           <h2 class="title-xl mb-4" style="color: var(--tennis-green-dark)">
             MEHR ALS NUR<br>
-            <span style="color: var(--tennis-orange)">TENNIS SPIELEN</span>
+            <span style="color: var(--tennis-secondary)">TENNIS SPIELEN</span>
           </h2>
-          <div class="w-32 h-1 bg-orange-500 mx-auto"></div>
+          <div class="w-32 h-1 bg-gray-900 mx-auto"></div>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
           <!-- Events -->
           <div class="text-center">
             <div class="tennis-card p-8">
-              <Icon name="heroicons:sparkles" class="w-16 h-16 mx-auto mb-4" style="color: var(--tennis-orange)" />
+              <Icon name="heroicons:sparkles" class="w-16 h-16 mx-auto mb-4" style="color: var(--tennis-secondary)" />
               <h3 class="title mb-4">Termine & Events</h3>
               <p class="text-body">
                 Wir veranstalten über den Sommer diverse Tennisevents. Angefangen von Saisoneröffnungen im Mai, 
@@ -103,7 +103,7 @@
           <!-- Facilities -->
           <div class="text-center">
             <div class="tennis-card p-8">
-              <Icon name="heroicons:building-office-2" class="w-16 h-16 mx-auto mb-4" style="color: var(--tennis-orange)" />
+              <Icon name="heroicons:building-office-2" class="w-16 h-16 mx-auto mb-4" style="color: var(--tennis-secondary)" />
               <h3 class="title mb-4">Unsere schöne Anlage</h3>
               <p class="text-body">
                 Unsere Anlage bietet zwei Outdoor Tennisplätze sowie eine Tennishalle, 
@@ -120,9 +120,9 @@
       <UContainer>
         <div class="text-center mb-12">
           <h2 class="title-xl mb-4" style="color: var(--tennis-green-dark)">
-            Aktuelle <span style="color: var(--tennis-orange)">Neuigkeiten</span>
+            Aktuelle <span style="color: var(--tennis-secondary)">Neuigkeiten</span>
           </h2>
-          <div class="w-32 h-1 bg-orange-500 mx-auto"></div>
+          <div class="w-32 h-1 bg-gray-900 mx-auto"></div>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">

@@ -12,14 +12,14 @@ body {
   background-color: #fafafa;
 }
 
-/* Tennis Club Color Theme - Based on TUS Traunreut */
+/* Tennis Club Color Theme - Professional Green & Gray */
 :root {
   --tennis-green-dark: #1a5f3f;
   --tennis-green: #2d7a4f;
   --tennis-green-light: #4ade80;
-  --tennis-orange: #f97316;
-  --tennis-orange-light: #fb923c;
-  --tennis-orange-dark: #ea580c;
+  --tennis-secondary: #111827;
+  --tennis-secondary-light: #374151;
+  --tennis-secondary-dark: #030712;
   --tennis-gray-light: #f8fafc;
   --tennis-gray: #64748b;
   --tennis-gray-dark: #334155;
@@ -30,8 +30,8 @@ body {
   background: linear-gradient(135deg, var(--tennis-green) 0%, var(--tennis-green-dark) 100%);
 }
 
-.tennis-orange-gradient {
-  background: linear-gradient(135deg, var(--tennis-orange) 0%, var(--tennis-orange-dark) 100%);
+.tennis-secondary-gradient {
+  background: linear-gradient(135deg, var(--tennis-secondary-light) 0%, var(--tennis-secondary-dark) 100%);
 }
 
 /* Custom Typography Classes - Light Background (Default) */
@@ -121,7 +121,7 @@ body {
 }
 
 .btn-tennis-secondary {
-  background: var(--tennis-orange);
+  background: var(--tennis-secondary);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -131,7 +131,7 @@ body {
 }
 
 .btn-tennis-secondary:hover {
-  background: var(--tennis-orange-dark);
+  background: var(--tennis-secondary-dark);
   transform: translateY(-1px);
 }
 
