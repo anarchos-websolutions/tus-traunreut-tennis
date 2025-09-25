@@ -5,9 +5,9 @@
       <UContainer>
         <div class="text-center">
           <h1 class="text-4xl md:text-5xl font-bold mb-4">
-            <span class="text-orange-400">Mitglieder</span>
+            <span class="text-[var(--color-secondary-200)]">Mitglieder</span>
           </h1>
-          <div class="w-32 h-1 bg-orange-500 mx-auto mb-6"></div>
+          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto mb-6"></div>
           <p class="text-xl text-green-100">
             Werden Sie Teil unserer Tennisfamilie
           </p>
@@ -20,7 +20,7 @@
       <UContainer>
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold mb-4" style="color: var(--tennis-green-dark)">
-            Mitgliedschafts<span style="color: var(--tennis-orange)">vorteile</span>
+            Mitgliedschafts<span style="color: var(--color-secondary-900)">vorteile</span>
           </h2>
           <p class="text-lg text-gray-600 max-w-3xl mx-auto">
             Als Mitglied der TUS Traunreut Tennisabteilung genießen Sie viele Vorteile und sind Teil einer aktiven Tennisgemeinschaft.
@@ -30,7 +30,7 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Benefit 1 -->
           <div class="tennis-card p-6 text-center">
-            <Icon name="heroicons:currency-euro" class="w-16 h-16 mx-auto mb-4" style="color: var(--tennis-orange)" />
+            <Icon name="heroicons:currency-euro" class="w-16 h-16 mx-auto mb-4" style="color: var(--color-secondary-900)" />
             <h3 class="text-xl font-semibold mb-4" style="color: var(--tennis-green-dark)">Günstige Platzpreise</h3>
             <p class="text-gray-600">
               Mitglieder zahlen reduzierte Preise für die Platznutzung sowohl indoor als auch outdoor.
@@ -48,7 +48,7 @@
 
           <!-- Benefit 3 -->
           <div class="tennis-card p-6 text-center">
-            <Icon name="heroicons:trophy" class="w-16 h-16 mx-auto mb-4" style="color: var(--tennis-orange)" />
+            <Icon name="heroicons:trophy" class="w-16 h-16 mx-auto mb-4" style="color: var(--color-secondary-900)" />
             <h3 class="text-xl font-semibold mb-4" style="color: var(--tennis-green-dark)">Turnierteilnahme</h3>
             <p class="text-gray-600">
               Teilnahme an vereinsinternen Turnieren und Meisterschaften mit reduzierten Startgebühren.
@@ -66,7 +66,7 @@
 
           <!-- Benefit 5 -->
           <div class="tennis-card p-6 text-center">
-            <Icon name="heroicons:calendar-days" class="w-16 h-16 mx-auto mb-4" style="color: var(--tennis-orange)" />
+            <Icon name="heroicons:calendar-days" class="w-16 h-16 mx-auto mb-4" style="color: var(--color-secondary-900)" />
             <h3 class="text-xl font-semibold mb-4" style="color: var(--tennis-green-dark)">Events & Feste</h3>
             <p class="text-gray-600">
               Einladung zu Vereinsveranstaltungen, Sommerfesten und gesellschaftlichen Events.
@@ -90,9 +90,9 @@
       <UContainer>
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold mb-4" style="color: var(--tennis-green-dark)">
-            Mitgliedschafts<span style="color: var(--tennis-orange)">arten</span>
+            Mitgliedschafts<span style="color: var(--color-secondary-900)">arten</span>
           </h2>
-          <div class="w-32 h-1 bg-orange-500 mx-auto mb-6"></div>
+          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto mb-6"></div>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -141,7 +141,7 @@
               <div class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium mb-3">
                 Beliebt
               </div>
-              <Icon name="heroicons:user-group" class="w-16 h-16 mx-auto mb-4" style="color: var(--tennis-orange)" />
+              <Icon name="heroicons:user-group" class="w-16 h-16 mx-auto mb-4" style="color: var(--color-secondary-900)" />
               <h3 class="text-2xl font-semibold mb-2" style="color: var(--tennis-green-dark)">Jugendliche</h3>
               <p class="text-gray-600">Bis 18 Jahre</p>
             </div>
@@ -224,9 +224,9 @@
       <UContainer>
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold mb-4" style="color: var(--tennis-green-dark)">
-            So werden Sie <span style="color: var(--tennis-orange)">Mitglied</span>
+            So werden Sie <span style="color: var(--color-secondary-900)">Mitglied</span>
           </h2>
-          <div class="w-32 h-1 bg-orange-500 mx-auto mb-6"></div>
+          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto mb-6"></div>
         </div>
 
         <div class="max-w-4xl mx-auto">
@@ -276,9 +276,9 @@
       <UContainer>
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold mb-4" style="color: var(--tennis-green-dark)">
-            Haben Sie <span style="color: var(--tennis-orange)">Fragen?</span>
+            Haben Sie <span style="color: var(--color-secondary-900)">Fragen?</span>
           </h2>
-          <div class="w-32 h-1 bg-orange-500 mx-auto mb-6"></div>
+          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto mb-6"></div>
           <p class="text-lg text-gray-600">
             Kontaktieren Sie uns für weitere Informationen zur Mitgliedschaft
           </p>
@@ -292,7 +292,7 @@
               
               <div class="space-y-4">
                 <div class="flex items-center">
-                  <Icon name="heroicons:envelope" class="w-6 h-6 mr-4" style="color: var(--tennis-orange)" />
+                  <Icon name="heroicons:envelope" class="w-6 h-6 mr-4" style="color: var(--color-secondary-900)" />
                   <div>
                     <p class="font-medium">E-Mail</p>
                     <a href="mailto:info@tennis-traunreut.de" class="text-gray-600 hover:text-orange-600">
@@ -302,7 +302,7 @@
                 </div>
 
                 <div class="flex items-center">
-                  <Icon name="heroicons:phone" class="w-6 h-6 mr-4" style="color: var(--tennis-orange)" />
+                  <Icon name="heroicons:phone" class="w-6 h-6 mr-4" style="color: var(--color-secondary-900)" />
                   <div>
                     <p class="font-medium">Telefon</p>
                     <a href="tel:+4986692971" class="text-gray-600 hover:text-orange-600">
@@ -312,7 +312,7 @@
                 </div>
 
                 <div class="flex items-center">
-                  <Icon name="heroicons:map-pin" class="w-6 h-6 mr-4" style="color: var(--tennis-orange)" />
+                  <Icon name="heroicons:map-pin" class="w-6 h-6 mr-4" style="color: var(--color-secondary-900)" />
                   <div>
                     <p class="font-medium">Adresse</p>
                     <p class="text-gray-600">

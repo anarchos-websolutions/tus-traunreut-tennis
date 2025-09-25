@@ -5,9 +5,9 @@
       <UContainer>
         <div class="text-center">
           <h1 class="text-4xl md:text-5xl font-bold mb-4">
-            <span class="text-orange-400">Aktuelles</span>
+            <span class="text-[var(--color-secondary-200)]">Aktuelles</span>
           </h1>
-          <div class="w-32 h-1 bg-orange-500 mx-auto mb-6"></div>
+          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto mb-6"></div>
           <p class="text-xl text-green-100">
             Neuigkeiten und Berichte aus der Tennisabteilung
           </p>
@@ -129,16 +129,16 @@
       <UContainer>
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold mb-4" style="color: var(--tennis-green-dark)">
-            Kommende <span style="color: var(--tennis-orange)">Termine</span>
+            Kommende <span style="color: var(--color-secondary-900)">Termine</span>
           </h2>
-          <div class="w-32 h-1 bg-orange-500 mx-auto mb-6"></div>
+          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto mb-6"></div>
           <p class="text-lg text-gray-600">
             Alle Termine anzeigen...
           </p>
         </div>
 
         <div class="max-w-2xl mx-auto tennis-card p-8 text-center">
-          <Icon name="heroicons:calendar-days" class="w-16 h-16 mx-auto mb-6" style="color: var(--tennis-orange)" />
+          <Icon name="heroicons:calendar-days" class="w-16 h-16 mx-auto mb-6" style="color: var(--color-secondary-900)" />
           <h3 class="text-xl font-semibold mb-4" style="color: var(--tennis-green-dark)">
             Keine Termine gefunden
           </h3>
@@ -165,13 +165,13 @@
           <h2 class="text-3xl font-bold mb-4" style="color: var(--tennis-green-dark)">
             Kategorien
           </h2>
-          <div class="w-32 h-1 bg-orange-500 mx-auto"></div>
+          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto"></div>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <!-- Berichte -->
           <div class="tennis-card p-6 text-center">
-            <Icon name="heroicons:document-text" class="w-12 h-12 mx-auto mb-4" style="color: var(--tennis-orange)" />
+            <Icon name="heroicons:document-text" class="w-12 h-12 mx-auto mb-4" style="color: var(--color-secondary-900)" />
             <h3 class="text-lg font-semibold mb-2" style="color: var(--tennis-green-dark)">Berichte</h3>
             <p class="text-gray-600 text-sm mb-4">
               Berichte von Turnieren, Events und besonderen Ereignissen
@@ -191,7 +191,7 @@
 
           <!-- Vereinsnews -->
           <div class="tennis-card p-6 text-center">
-            <Icon name="heroicons:megaphone" class="w-12 h-12 mx-auto mb-4" style="color: var(--tennis-orange)" />
+            <Icon name="heroicons:megaphone" class="w-12 h-12 mx-auto mb-4" style="color: var(--color-secondary-900)" />
             <h3 class="text-lg font-semibold mb-2" style="color: var(--tennis-green-dark)">Vereinsnews</h3>
             <p class="text-gray-600 text-sm mb-4">
               Neuigkeiten aus dem Vereinsleben und der Abteilungsführung

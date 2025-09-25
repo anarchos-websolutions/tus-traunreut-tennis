@@ -4,11 +4,11 @@
     <section class="tennis-gradient text-white py-16">
       <UContainer>
         <div class="text-center">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">
-            <span class="text-orange-400">Trainingsangebot</span>
+          <h1 class="display-xl-dark mb-4">
+            <span class="text-[var(--color-secondary-200)]">Trainingsangebot</span>
           </h1>
-          <div class="w-32 h-1 bg-orange-500 mx-auto mb-6"></div>
-          <p class="text-xl text-green-100">
+          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto mb-6"></div>
+          <p class="body-lg-dark">
             Vielfältige Trainingsmöglichkeiten für alle Leistungsstufen
           </p>
         </div>
@@ -20,7 +20,7 @@
       <UContainer>
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold mb-4" style="color: var(--tennis-green-dark)">
-            Unser <span style="color: var(--tennis-orange)">Trainingsangebot</span>
+            Unser <span style="color: var(--color-secondary-900)">Trainingsangebot</span>
           </h2>
           <p class="text-lg text-gray-600 max-w-3xl mx-auto">
             Ihnen steht eine Vielzahl von verschiedenen Trainingsangeboten zur Auswahl. 
@@ -32,7 +32,7 @@
           <!-- Jugendtraining -->
           <div class="tennis-card p-6">
             <div class="text-center mb-6">
-              <Icon name="heroicons:user-group" class="w-16 h-16 mx-auto mb-4" style="color: var(--tennis-orange)" />
+              <Icon name="heroicons:user-group" class="w-16 h-16 mx-auto mb-4" style="color: var(--color-secondary-900)" />
               <h3 class="text-xl font-semibold" style="color: var(--tennis-green-dark)">Jugendtraining</h3>
             </div>
             <ul class="space-y-2 text-gray-600">
@@ -84,7 +84,7 @@
           <!-- Matchtraining -->
           <div class="tennis-card p-6">
             <div class="text-center mb-6">
-              <Icon name="heroicons:trophy" class="w-16 h-16 mx-auto mb-4" style="color: var(--tennis-orange)" />
+              <Icon name="heroicons:trophy" class="w-16 h-16 mx-auto mb-4" style="color: var(--color-secondary-900)" />
               <h3 class="text-xl font-semibold" style="color: var(--tennis-green-dark)">Matchtraining</h3>
             </div>
             <ul class="space-y-2 text-gray-600">
@@ -136,7 +136,7 @@
           <!-- Gruppentraining -->
           <div class="tennis-card p-6">
             <div class="text-center mb-6">
-              <Icon name="heroicons:users" class="w-16 h-16 mx-auto mb-4" style="color: var(--tennis-orange)" />
+              <Icon name="heroicons:users" class="w-16 h-16 mx-auto mb-4" style="color: var(--color-secondary-900)" />
               <h3 class="text-xl font-semibold" style="color: var(--tennis-green-dark)">Gruppentraining</h3>
             </div>
             <ul class="space-y-2 text-gray-600">
@@ -193,9 +193,9 @@
       <UContainer>
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold mb-4" style="color: var(--tennis-green-dark)">
-            Trainings<span style="color: var(--tennis-orange)">zeiten</span>
+            Trainings<span style="color: var(--color-secondary-900)">zeiten</span>
           </h2>
-          <div class="w-32 h-1 bg-orange-500 mx-auto mb-6"></div>
+          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto mb-6"></div>
           <p class="text-lg text-gray-600">
             Unsere aktuellen Trainingszeiten im Überblick
           </p>
@@ -248,9 +248,9 @@
             </div>
           </div>
 
-          <div class="mt-8 p-4 bg-orange-50 rounded-lg">
+          <div class="mt-8 p-4 bg-[var(--color-secondary-50)] rounded-lg">
             <p class="text-sm text-gray-600 text-center">
-              <Icon name="heroicons:information-circle" class="w-5 h-5 inline mr-2" style="color: var(--tennis-orange)" />
+              <Icon name="heroicons:information-circle" class="w-5 h-5 inline mr-2" style="color: var(--color-secondary-900)" />
               Trainingszeiten können saisonal variieren. Aktuelle Zeiten erfahren Sie bei der Anmeldung.
             </p>
           </div>
@@ -263,9 +263,9 @@
       <UContainer>
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold mb-4" style="color: var(--tennis-green-dark)">
-            Training <span style="color: var(--tennis-orange)">buchen</span>
+            Training <span style="color: var(--color-secondary-900)">buchen</span>
           </h2>
-          <div class="w-32 h-1 bg-orange-500 mx-auto mb-6"></div>
+          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto mb-6"></div>
           <p class="text-lg text-gray-600">
             Interessiert an unserem Trainingsangebot? Kontaktieren Sie uns!
           </p>
@@ -274,12 +274,12 @@
         <div class="max-w-2xl mx-auto tennis-card p-8 text-center">
           <div class="grid md:grid-cols-2 gap-8 mb-8">
             <div>
-              <Icon name="heroicons:envelope" class="w-8 h-8 mx-auto mb-3" style="color: var(--tennis-orange)" />
+              <Icon name="heroicons:envelope" class="w-8 h-8 mx-auto mb-3" style="color: var(--color-secondary-900)" />
               <h3 class="font-semibold mb-2">E-Mail</h3>
               <p class="text-gray-600">info@tennis-traunreut.de</p>
             </div>
             <div>
-              <Icon name="heroicons:phone" class="w-8 h-8 mx-auto mb-3" style="color: var(--tennis-orange)" />
+              <Icon name="heroicons:phone" class="w-8 h-8 mx-auto mb-3" style="color: var(--color-secondary-900)" />
               <h3 class="font-semibold mb-2">Telefon</h3>
               <p class="text-gray-600">+49 (0) 8669 - 2971</p>
             </div>

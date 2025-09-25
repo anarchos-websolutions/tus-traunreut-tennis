@@ -4,11 +4,11 @@
     <section class="tennis-gradient text-white py-16">
       <UContainer>
         <div class="text-center">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">
-            <span class="text-orange-400">Tennisplätze</span>
+          <h1 class="display-xl-dark mb-4">
+            <span class="text-[var(--color-secondary-200)]">Tennisplätze</span>
           </h1>
-          <div class="w-32 h-1 bg-orange-500 mx-auto mb-6"></div>
-          <p class="text-xl text-green-100">
+          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto mb-6"></div>
+          <p class="body-lg-dark">
             Moderne Tennisanlagen für optimales Spielvergnügen
           </p>
         </div>
@@ -20,7 +20,7 @@
       <UContainer>
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold mb-4" style="color: var(--tennis-green-dark)">
-            Unsere <span style="color: var(--tennis-orange)">Tennisanlage</span>
+            Unsere <span style="color: var(--color-secondary-900)">Tennisanlage</span>
           </h2>
           <p class="text-lg text-gray-600 max-w-3xl mx-auto">
             Unsere Anlage bietet zwei Outdoor Tennisplätze sowie eine Tennishalle mit drei Spielfeldern zur Nutzung.
@@ -31,7 +31,7 @@
           <!-- Outdoor Courts -->
           <div class="tennis-card p-8">
             <div class="flex items-center mb-6">
-              <Icon name="heroicons:sun" class="w-12 h-12 mr-4" style="color: var(--tennis-orange)" />
+              <Icon name="heroicons:sun" class="w-12 h-12 mr-4" style="color: var(--color-secondary-900)" />
               <h3 class="text-2xl font-bold" style="color: var(--tennis-green-dark)">Sand-Tennisplätze</h3>
             </div>
             
@@ -120,15 +120,15 @@
       <UContainer>
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold mb-4" style="color: var(--tennis-green-dark)">
-            Platz<span style="color: var(--tennis-orange)">details</span>
+            Platz<span style="color: var(--color-secondary-900)">details</span>
           </h2>
-          <div class="w-32 h-1 bg-orange-500 mx-auto"></div>
+          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto"></div>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
           <!-- Court Specifications -->
           <div class="tennis-card p-6">
-            <Icon name="heroicons:rectangle-stack" class="w-12 h-12 mx-auto mb-4" style="color: var(--tennis-orange)" />
+            <Icon name="heroicons:rectangle-stack" class="w-12 h-12 mx-auto mb-4" style="color: var(--color-secondary-900)" />
             <h3 class="text-xl font-semibold mb-4 text-center" style="color: var(--tennis-green-dark)">Platzspezifikationen</h3>
             <ul class="space-y-2 text-gray-600 text-sm">
               <li class="flex justify-between">
@@ -184,7 +184,7 @@
 
           <!-- Services -->
           <div class="tennis-card p-6">
-            <Icon name="heroicons:cog-6-tooth" class="w-12 h-12 mx-auto mb-4" style="color: var(--tennis-orange)" />
+            <Icon name="heroicons:cog-6-tooth" class="w-12 h-12 mx-auto mb-4" style="color: var(--color-secondary-900)" />
             <h3 class="text-xl font-semibold mb-4 text-center" style="color: var(--tennis-green-dark)">Services</h3>
             <ul class="space-y-2 text-gray-600 text-sm">
               <li class="flex items-center">
@@ -218,9 +218,9 @@
       <UContainer>
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold mb-4" style="color: var(--tennis-green-dark)">
-            Öffnungs<span style="color: var(--tennis-orange)">zeiten</span>
+            Öffnungs<span style="color: var(--color-secondary-900)">zeiten</span>
           </h2>
-          <div class="w-32 h-1 bg-orange-500 mx-auto mb-6"></div>
+          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto mb-6"></div>
         </div>
 
         <div class="max-w-4xl mx-auto">
@@ -256,7 +256,7 @@
             <!-- Outdoor Hours -->
             <div class="tennis-card p-8">
               <div class="text-center mb-6">
-                <Icon name="heroicons:sun" class="w-12 h-12 mx-auto mb-3" style="color: var(--tennis-orange)" />
+                <Icon name="heroicons:sun" class="w-12 h-12 mx-auto mb-3" style="color: var(--color-secondary-900)" />
                 <h3 class="text-xl font-semibold" style="color: var(--tennis-green-dark)">Außenplätze</h3>
                 <p class="text-sm text-gray-600">April - Oktober (wetterabhängig)</p>
               </div>
@@ -282,9 +282,9 @@
             </div>
           </div>
 
-          <div class="mt-8 p-4 bg-orange-50 rounded-lg">
+          <div class="mt-8 p-4 bg-[var(--color-secondary-50)] rounded-lg">
             <p class="text-sm text-gray-600 text-center">
-              <Icon name="heroicons:information-circle" class="w-5 h-5 inline mr-2" style="color: var(--tennis-orange)" />
+              <Icon name="heroicons:information-circle" class="w-5 h-5 inline mr-2" style="color: var(--color-secondary-900)" />
               Öffnungszeiten können an Feiertagen und während der Ferienzeiten abweichen. 
               Aktuelle Informationen erhalten Sie telefonisch oder per E-Mail.
             </p>
@@ -298,7 +298,7 @@
       <UContainer>
         <div class="text-center">
           <h2 class="text-3xl font-bold mb-4">Platz reservieren</h2>
-          <p class="text-lg mb-8 text-green-100">
+          <p class="body-lg-dark mb-8">
             Buchen Sie Ihren Tennisplatz schnell und einfach online oder telefonisch
           </p>
           
@@ -318,12 +318,12 @@
             <div>
               <Icon name="heroicons:envelope" class="w-8 h-8 mx-auto mb-3" />
               <h3 class="font-semibold mb-2">E-Mail</h3>
-              <p class="text-green-100">info@tennishalle-traunreut.de</p>
+              <p class="body-md-dark">info@tennishalle-traunreut.de</p>
             </div>
             <div>
               <Icon name="heroicons:phone" class="w-8 h-8 mx-auto mb-3" />
               <h3 class="font-semibold mb-2">Telefon</h3>
-              <p class="text-green-100">+49 (0) 8669 - 2971</p>
+              <p class="body-md-dark">+49 (0) 8669 - 2971</p>
             </div>
           </div>
         </div>

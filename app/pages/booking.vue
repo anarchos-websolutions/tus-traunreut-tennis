@@ -5,9 +5,9 @@
       <UContainer>
         <div class="text-center">
           <h1 class="text-4xl md:text-5xl font-bold mb-4">
-            <span class="text-orange-400">Jetzt Buchen</span>
+            <span class="text-[var(--color-secondary-200)]">Jetzt Buchen</span>
           </h1>
-          <div class="w-32 h-1 bg-orange-500 mx-auto mb-6"></div>
+          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto mb-6"></div>
           <p class="text-xl text-green-100">
             Reservieren Sie Ihren Tennisplatz schnell und einfach
           </p>
@@ -20,7 +20,7 @@
       <UContainer>
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold mb-4" style="color: var(--tennis-green-dark)">
-            Buchungs<span style="color: var(--tennis-orange)">optionen</span>
+            Buchungs<span style="color: var(--color-secondary-900)">optionen</span>
           </h2>
           <p class="text-lg text-gray-600">
             Wählen Sie Ihre bevorzugte Buchungsmethode
@@ -30,7 +30,7 @@
         <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <!-- Online Booking -->
           <div class="tennis-card p-8 text-center">
-            <Icon name="heroicons:computer-desktop" class="w-16 h-16 mx-auto mb-6" style="color: var(--tennis-orange)" />
+            <Icon name="heroicons:computer-desktop" class="w-16 h-16 mx-auto mb-6" style="color: var(--color-secondary-900)" />
             <h3 class="text-2xl font-semibold mb-4" style="color: var(--tennis-green-dark)">Online-Buchungssystem</h3>
             <p class="text-gray-600 mb-6">
               Nutzen Sie unser modernes Online-Buchungssystem für eine nahtlose und benutzerfreundliche 
@@ -108,15 +108,15 @@
       <UContainer>
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold mb-4" style="color: var(--tennis-green-dark)">
-            Wichtige <span style="color: var(--tennis-orange)">Informationen</span>
+            Wichtige <span style="color: var(--color-secondary-900)">Informationen</span>
           </h2>
-          <div class="w-32 h-1 bg-orange-500 mx-auto"></div>
+          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto"></div>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Booking Rules -->
           <div class="tennis-card p-6">
-            <Icon name="heroicons:document-text" class="w-12 h-12 mb-4" style="color: var(--tennis-orange)" />
+            <Icon name="heroicons:document-text" class="w-12 h-12 mb-4" style="color: var(--color-secondary-900)" />
             <h3 class="text-xl font-semibold mb-4" style="color: var(--tennis-green-dark)">Buchungsregeln</h3>
             <ul class="space-y-2 text-gray-600 text-sm">
               <li class="flex items-start">
@@ -168,7 +168,7 @@
 
           <!-- Payment -->
           <div class="tennis-card p-6">
-            <Icon name="heroicons:credit-card" class="w-12 h-12 mb-4" style="color: var(--tennis-orange)" />
+            <Icon name="heroicons:credit-card" class="w-12 h-12 mb-4" style="color: var(--color-secondary-900)" />
             <h3 class="text-xl font-semibold mb-4" style="color: var(--tennis-green-dark)">Zahlungsarten</h3>
             <ul class="space-y-2 text-gray-600 text-sm">
               <li class="flex items-center">
@@ -202,9 +202,9 @@
       <UContainer>
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold mb-4" style="color: var(--tennis-green-dark)">
-            Platz<span style="color: var(--tennis-orange)">verfügbarkeit</span>
+            Platz<span style="color: var(--color-secondary-900)">verfügbarkeit</span>
           </h2>
-          <div class="w-32 h-1 bg-orange-500 mx-auto mb-6"></div>
+          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto mb-6"></div>
           <p class="text-lg text-gray-600">
             Übersicht unserer Tennisplätze und deren Verfügbarkeit
           </p>
@@ -245,7 +245,7 @@
           <!-- Outdoor Courts -->
           <div class="tennis-card p-8">
             <div class="text-center mb-6">
-              <Icon name="heroicons:sun" class="w-16 h-16 mx-auto mb-4" style="color: var(--tennis-orange)" />
+              <Icon name="heroicons:sun" class="w-16 h-16 mx-auto mb-4" style="color: var(--color-secondary-900)" />
               <h3 class="text-2xl font-semibold" style="color: var(--tennis-green-dark)">Außenplätze</h3>
               <p class="text-gray-600">2 Sandplätze</p>
             </div>
