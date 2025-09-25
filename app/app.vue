@@ -11,15 +11,10 @@
 </template>
 
 <script setup>
-// This is the root app component (app.vue)
-// Components from ~/components/ are auto-imported in Nuxt 4
-// Pages from ~/pages/ are automatically routed
-
-// Global app configuration
 useHead({
   titleTemplate: '%s - Tennis Club',
   htmlAttrs: {
-    lang: 'en'
+    lang: 'de'
   },
   meta: [
     { charset: 'utf-8' },
