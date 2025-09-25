@@ -5,7 +5,8 @@ CRITICAL PROCESS:
 2. VERIFY directory structure against the "App Directory Structure" section (lines 50-64)
 3. CONFIRM component placement is under app/components/ not root components/
 4. DOUBLE-CHECK auto-import patterns match the guide exactly
-5. NEVER rely on general Nuxt knowledge - only use what's documented in the guide
+5. FOR UI/COMPONENT work, ALSO reference nuxt-ui-comprehensive-guide.md
+6. NEVER rely on general Nuxt knowledge - only use what's documented in the guides
 
 DIRECTORY STRUCTURE VERIFICATION:
 - Components MUST be in app/components/ (NOT root components/)
@@ -15,5 +16,15 @@ DIRECTORY STRUCTURE VERIFICATION:
 - Always cross-reference with guide before suggesting directory changes
 - NEVER assume - always search the guide for exact patterns
 
+UI/COMPONENT IMPLEMENTATION RULES:
+- For Nuxt UI components, ALWAYS consult nuxt-ui-comprehensive-guide.md first
+- Use proper UApp wrapper in app.vue for Nuxt UI components
+- Follow Nuxt UI theming patterns (slots, variants, colors)
+- Import CSS correctly: @import "tailwindcss"; @import "@nuxt/ui";
+- Use Nuxt UI composables (useToast, useColorMode, etc.) when available
+- Verify component props, slots, and emits against the comprehensive guide
+- Follow Nuxt UI form patterns with UForm for validation
+
 Key documentation is available in:
 - nuxt-4-development-guide.md (comprehensive Nuxt 4 guide) - ALWAYS SEARCH THIS FIRST
+- nuxt-ui-comprehensive-guide.md (comprehensive Nuxt UI v4 guide) - SEARCH FOR UI/COMPONENT WORK

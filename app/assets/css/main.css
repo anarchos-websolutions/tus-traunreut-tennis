@@ -1,5 +1,6 @@
-/* Main CSS file for Nuxt 4 application */
-/* @nuxt/ui automatically includes Tailwind CSS - no need to import it manually */
+/* Import Tailwind CSS and Nuxt UI as per official documentation */
+@import "tailwindcss";
+@import "@nuxt/ui";
 
 /* Custom global styles */
 html {

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <UApp>
     <!-- App Header -->
     <AppHeader />
     
@@ -7,7 +7,7 @@
     <main>
       <NuxtPage />
     </main>
-  </div>
+  </UApp>
 </template>
 
 <script setup>
