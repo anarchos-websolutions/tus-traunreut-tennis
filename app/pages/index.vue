@@ -4,14 +4,13 @@
     <section class="tennis-gradient text-white">
       <UContainer class="py-20">
         <div class="text-center">
-          <h1 class="text-5xl md:text-6xl font-bold mb-6">
-            TENNIS IM<br>
-            <span class="text-orange-400">TUS TRAUNREUT</span>
+          <h1 class="title-hero mb-6">
+            TENNIS IM TUS TRAUNREUT
           </h1>
           <div class="w-32 h-1 bg-orange-500 mx-auto mb-6"></div>
-          <p class="text-xl md:text-2xl mb-8 text-green-100">
-            der Turn- und Sportverein im Herzen des Chiemgaus
-          </p>
+            <p class="text-body-lg-dark mb-8">
+              der Turn- und Sportverein im Herzen des Chiemgaus
+            </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <NuxtLink to="/booking" class="btn-tennis-secondary text-lg px-8 py-3">
               Jetzt buchen
@@ -31,16 +30,16 @@
           <!-- Next Event -->
           <div class="tennis-card p-6 text-center">
             <Icon name="heroicons:calendar-days" class="w-12 h-12 mx-auto mb-4" style="color: var(--tennis-green)" />
-            <h3 class="text-xl font-semibold mb-2">Nächster Termin</h3>
-            <p class="text-gray-600 mb-4">Alle Termine anzeigen...</p>
+            <h3 class="title mb-2">Nächster Termin</h3>
+            <p class="text-body mb-4">Alle Termine anzeigen...</p>
             <p class="text-orange-600 font-medium">Keine Termine gefunden</p>
           </div>
 
           <!-- Tennis Department -->
           <div class="tennis-card p-6 text-center">
             <Icon name="heroicons:trophy" class="w-12 h-12 mx-auto mb-4" style="color: var(--tennis-orange)" />
-            <h3 class="text-xl font-semibold mb-2">TuS Tennisabteilung</h3>
-            <p class="text-gray-600 mb-4">Die TuS-Tennisabteilung wünscht viel Glück und ein gesundes, verletzungsfreies Jahr 2025.</p>
+            <h3 class="title mb-2">TuS Tennisabteilung</h3>
+            <p class="text-body mb-4">Die TuS-Tennisabteilung wünscht viel Glück und ein gesundes, verletzungsfreies Jahr 2025.</p>
             <NuxtLink to="/abteilung" class="text-green-600 hover:text-green-700 font-medium">
               Mehr erfahren →
             </NuxtLink>
@@ -49,8 +48,8 @@
           <!-- Sand Courts -->
           <div class="tennis-card p-6 text-center">
             <Icon name="heroicons:building-storefront" class="w-12 h-12 mx-auto mb-4" style="color: var(--tennis-green)" />
-            <h3 class="text-xl font-semibold mb-2">Sand-Tennisplätze</h3>
-            <p class="text-gray-600 mb-4">Unsere schöne Anlage bietet zwei Outdoor Tennisplätze sowie eine Tennishalle mit drei Spielfeldern.</p>
+            <h3 class="title mb-2">Sand-Tennisplätze</h3>
+            <p class="text-body mb-4">Unsere schöne Anlage bietet zwei Outdoor Tennisplätze sowie eine Tennishalle mit drei Spielfeldern.</p>
             <NuxtLink to="/anlagen" class="text-green-600 hover:text-green-700 font-medium">
               Anlagen ansehen →
             </NuxtLink>
@@ -63,7 +62,7 @@
     <section class="py-16 bg-gray-50">
       <UContainer>
         <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold mb-4" style="color: var(--tennis-green-dark)">
+          <h2 class="title-xl mb-4" style="color: var(--tennis-green-dark)">
             MEHR ALS NUR<br>
             <span style="color: var(--tennis-orange)">TENNIS SPIELEN</span>
           </h2>
@@ -75,8 +74,8 @@
           <div class="text-center">
             <div class="tennis-card p-8">
               <Icon name="heroicons:sparkles" class="w-16 h-16 mx-auto mb-4" style="color: var(--tennis-orange)" />
-              <h3 class="text-xl font-semibold mb-4">Termine & Events</h3>
-              <p class="text-gray-600">
+              <h3 class="title mb-4">Termine & Events</h3>
+              <p class="text-body">
                 Wir veranstalten über den Sommer diverse Tennisevents. Angefangen von Saisoneröffnungen im Mai, 
                 über Cups während der Saison, bis hin zum Sommerfest und Abschlussfeier.
               </p>
@@ -87,11 +86,11 @@
           <div class="text-center">
             <div class="tennis-card p-8">
               <Icon name="heroicons:academic-cap" class="w-16 h-16 mx-auto mb-4" style="color: var(--tennis-green)" />
-              <h3 class="text-xl font-semibold mb-4">Trainingsangebote</h3>
-              <p class="text-gray-600 mb-4">
+              <h3 class="title mb-4">Trainingsangebote</h3>
+              <p class="text-body mb-4">
                 Ihnen steht eine Vielzahl von verschiedenen Trainingsangeboten zur Auswahl:
               </p>
-              <ul class="text-left text-gray-600 space-y-1">
+              <ul class="text-left text-body space-y-1">
                 <li>• Jugendtraining in verschiedenen Leistungsgruppen</li>
                 <li>• Individualtraining in Form von Einzelstunden</li>
                 <li>• Matchtraining</li>
@@ -105,8 +104,8 @@
           <div class="text-center">
             <div class="tennis-card p-8">
               <Icon name="heroicons:building-office-2" class="w-16 h-16 mx-auto mb-4" style="color: var(--tennis-orange)" />
-              <h3 class="text-xl font-semibold mb-4">Unsere schöne Anlage</h3>
-              <p class="text-gray-600">
+              <h3 class="title mb-4">Unsere schöne Anlage</h3>
+              <p class="text-body">
                 Unsere Anlage bietet zwei Outdoor Tennisplätze sowie eine Tennishalle, 
                 mit drei Spielfeldern, zur Nutzung.
               </p>
@@ -120,7 +119,7 @@
     <section class="py-16 bg-white">
       <UContainer>
         <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold mb-4" style="color: var(--tennis-green-dark)">
+          <h2 class="title-xl mb-4" style="color: var(--tennis-green-dark)">
             Aktuelle <span style="color: var(--tennis-orange)">Neuigkeiten</span>
           </h2>
           <div class="w-32 h-1 bg-orange-500 mx-auto"></div>
@@ -129,11 +128,11 @@
         <div class="grid md:grid-cols-2 gap-8">
           <!-- News Item 1 -->
           <article class="tennis-card p-6">
-            <h3 class="text-xl font-semibold mb-2" style="color: var(--tennis-green-dark)">
+            <h3 class="title mb-2" style="color: var(--tennis-green-dark)">
               Plätze werden saniert und vorbereitet
             </h3>
-            <p class="text-sm text-gray-500 mb-4">März 11, 2021</p>
-            <p class="text-gray-600">
+            <p class="text-muted mb-4">März 11, 2021</p>
+            <p class="text-body">
               Das Tennis-Spielen kann bald losgehen, mit dem herrichten der Plätze wird bald begonnen! 
               Spielen nur nach vorheriger Buchung!
             </p>
@@ -141,11 +140,11 @@
 
           <!-- News Item 2 -->
           <article class="tennis-card p-6">
-            <h3 class="text-xl font-semibold mb-2" style="color: var(--tennis-green-dark)">
+            <h3 class="title mb-2" style="color: var(--tennis-green-dark)">
               Information für Abospieler der Saison 2020/2021
             </h3>
-            <p class="text-sm text-gray-500 mb-4">März 11, 2021</p>
-            <p class="text-gray-600">
+            <p class="text-muted mb-4">März 11, 2021</p>
+            <p class="text-body">
               Unsere Abokunden erhalten ihren Ausfall während der Corona Sperren erstattet. 
               Am Ende des ABOs werden alle Spieler benachrichtigt. 
               Weitere Infos und Kontaktaufnahme bitte unter info@tennishalle-traunreut.de
@@ -165,8 +164,8 @@
     <section class="py-16 tennis-gradient text-white">
       <UContainer>
         <div class="text-center">
-          <h2 class="text-3xl font-bold mb-4">SPIELEN SIE GERNE TENNIS?</h2>
-          <p class="text-lg mb-8 text-green-100">
+          <h2 class="title-lg-dark mb-4">SPIELEN SIE GERNE TENNIS?</h2>
+          <p class="text-body-lg-dark mb-8">
             Melden Sie sich für unseren Newsletter an und erhalten Sie die neuesten Tipps und Tricks, 
             um Ihr Spiel aufzupolieren, ebenso wie unsere Mitgliederrabatte und eine Liste der kommenden Turniere!
           </p>

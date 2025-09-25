@@ -25,6 +25,15 @@ UI/COMPONENT IMPLEMENTATION RULES:
 - Verify component props, slots, and emits against the comprehensive guide
 - Follow Nuxt UI form patterns with UForm for validation
 
+TYPOGRAPHY RULES:
+- ALWAYS use custom typography classes from typography-guide.md
+- Use .title, .title-lg, .title-xl for headings (professional dark grey)
+- Use .text-body, .text-body-lg, .text-body-sm for content (readable grey)
+- Use .text-muted for secondary info, .text-accent for emphasis
+- NEVER use green/orange colors for body text - only for accents
+- Keep tennis colors for buttons, icons, and highlights only
+
 Key documentation is available in:
 - nuxt-4-development-guide.md (comprehensive Nuxt 4 guide) - ALWAYS SEARCH THIS FIRST
 - nuxt-ui-comprehensive-guide.md (comprehensive Nuxt UI v4 guide) - SEARCH FOR UI/COMPONENT WORK
+- typography-guide.md (custom typography classes) - REFERENCE FOR ALL TEXT STYLING

@@ -34,6 +34,76 @@ body {
   background: linear-gradient(135deg, var(--tennis-orange) 0%, var(--tennis-orange-dark) 100%);
 }
 
+/* Custom Typography Classes - Light Background (Default) */
+.title {
+  @apply text-2xl md:text-3xl font-bold text-slate-800 leading-tight;
+}
+
+.title-lg {
+  @apply text-3xl md:text-4xl font-bold text-slate-800 leading-tight;
+}
+
+.title-xl {
+  @apply text-4xl md:text-5xl font-bold text-slate-800 leading-tight;
+}
+
+.title-hero {
+  @apply text-5xl md:text-6xl font-bold text-white leading-tight;
+}
+
+.text-body {
+  @apply text-base text-slate-600 leading-relaxed;
+}
+
+.text-body-lg {
+  @apply text-lg text-slate-600 leading-relaxed;
+}
+
+.text-body-sm {
+  @apply text-sm text-slate-600 leading-relaxed;
+}
+
+.text-muted {
+  @apply text-slate-500 text-sm;
+}
+
+.text-accent {
+  @apply text-slate-700 font-medium;
+}
+
+/* Dark Background Variants */
+.title-dark {
+  @apply text-2xl md:text-3xl font-bold text-white leading-tight;
+}
+
+.title-lg-dark {
+  @apply text-3xl md:text-4xl font-bold text-white leading-tight;
+}
+
+.title-xl-dark {
+  @apply text-4xl md:text-5xl font-bold text-white leading-tight;
+}
+
+.text-body-dark {
+  @apply text-base text-slate-200 leading-relaxed;
+}
+
+.text-body-lg-dark {
+  @apply text-lg text-slate-200 leading-relaxed;
+}
+
+.text-body-sm-dark {
+  @apply text-sm text-slate-200 leading-relaxed;
+}
+
+.text-muted-dark {
+  @apply text-slate-300 text-sm;
+}
+
+.text-accent-dark {
+  @apply text-slate-100 font-medium;
+}
+
 /* Tennis-themed button styles */
 .btn-tennis-primary {
   background: var(--tennis-green);
