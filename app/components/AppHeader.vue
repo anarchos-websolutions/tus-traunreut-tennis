@@ -4,7 +4,8 @@
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
         <NuxtLink to="/" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-          <Icon name="heroicons:trophy" class="w-8 h-8" style="color: var(--tennis-green)" />
+          <!-- <Icon name="heroicons:trophy" class="w-8 h-8" style="color: var(--tennis-green)" /> -->
+           <NuxtImg src="/images/logo.png" />
           <div>
             <h1 class="text-xl font-bold" style="color: var(--tennis-green-dark)">TUS Traunreut</h1>
             <p class="text-xs" style="color: var(--tennis-secondary)">Tennis</p>

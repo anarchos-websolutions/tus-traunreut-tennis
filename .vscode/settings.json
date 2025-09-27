@@ -1,0 +1,15 @@
+{
+    "search.exclude": {
+        ".nuxt": true,
+        ".data": true,
+        ".output": true,
+        ".cache": true,
+        "dist": true,
+        "logs": true,
+        "package-lock.json": true,
+        "node_modules": true,
+        ".cursorrules": true,
+        "package.json": true,
+    },
+    "search.useIgnoreFiles": true
+}

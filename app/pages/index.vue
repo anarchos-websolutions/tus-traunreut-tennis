@@ -1,8 +1,25 @@
 <template>
   <div class="min-h-screen">
     <!-- Hero Section -->
-    <section class="tennis-gradient text-white">
-      <UContainer class="py-20">
+    <section class="relative text-white overflow-hidden min-h-[70vh] flex items-center">
+      <!-- Background Image -->
+      <NuxtImg 
+        src="/images/IMG_4715-min-scaled.jpeg" 
+        alt="Tennis court background"
+        class="absolute inset-0 w-full h-full object-cover"
+        :style="{ zIndex: -1 }"
+        loading="eager"
+        preload
+        format="webp"
+        quality="80"
+        width="1920"
+        height="1080"
+      />
+      <!-- Overlay for better text readability -->
+      <div class="absolute inset-0 bg-black/40"></div>
+      
+      <UContainer class="relative py-20">
+        
         <div class="text-center">
           <h1 class="title-hero mb-6">
             TENNIS IM TUS TRAUNREUT

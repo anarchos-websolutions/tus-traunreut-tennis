@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/ui', // '@nuxt/scripts',
   // '@nuxt/content'
-  '@nuxt/icon', '@nuxt/eslint'],
+  '@nuxt/icon', '@nuxt/eslint', '@nuxt/image'],
  
   // Performance optimizations
   experimental: {
@@ -47,7 +47,12 @@ export default defineNuxtConfig({
   icon: {
     size: '24px',
     class: 'icon',
-    mode: 'css'
+    mode: 'css',
+    cssLayer: 'base',
+    provider: 'none',
+    clientBundle: {
+      scan: true,
+    },
   },
   
   // Component auto-import configuration - Nuxt 4 should auto-detect app/components
