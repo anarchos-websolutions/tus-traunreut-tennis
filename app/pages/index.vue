@@ -14,29 +14,55 @@
         quality="80"
         width="1920"
         height="1080"
-      />
+        :custom="true"
+        v-slot="{ src, isLoaded, imgAttrs }"
+      >
+        <img
+          v-if="isLoaded"
+          v-bind="imgAttrs"
+          :src="src"
+        >
+
+        <!-- Show a placeholder while loading -->
+        <div
+          v-else
+          class="absolute inset-0 w-full h-full flex items-center justify-center bg-gray-900"
+        >
+          <Icon 
+            name="solar:tennis-bold" 
+            class="w-16 h-16 animate-spin opacity-30" 
+            style="color: var(--tennis-ball)" 
+          />
+        </div>
+      </NuxtImg>
       <!-- Overlay for better text readability -->
       <div class="absolute inset-0 bg-black/40"></div>
       
       <UContainer class="relative py-20">
         
         <div class="text-center">
-          <h1 class="title-hero mb-6">
-            TENNIS IM TUS TRAUNREUT
-          </h1>
+          <div class="flex items-center justify-center mb-6 space-x-2">
+            
+            <h1 class="title-hero ">
+              TENNIS IM TUS TRAUNREUT
+            </h1>
+          </div>
+          
           <div class="w-32 h-1 bg-gray-900 mx-auto mb-6"></div>
             <p class="text-body-lg-dark mb-8">
               der Turn- und Sportverein im Herzen des Chiemgaus
             </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <NuxtLink to="/booking" class="btn-tennis-secondary text-lg px-8 py-3">
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-36">
+            <NuxtLink to="/booking" class="btn">
               Jetzt buchen
             </NuxtLink>
-            <NuxtLink to="/anlagen" class="bg-white/20 hover:bg-white/30 text-white border border-white/30 px-8 py-3 rounded-lg font-semibold transition-all">
+            <NuxtLink to="/anlagen" class="btn">
               Tennishalle
             </NuxtLink>
           </div>
+          
         </div>
+        
       </UContainer>
     </section>
 
@@ -190,9 +216,9 @@
             <input 
               type="email" 
               placeholder="Ihre E-Mail Adresse"
-              class="flex-1 px-4 py-3 rounded-lg text-gray-900"
+              class="flex-1 px-4 py-3 rounded-lg text-white bg-white/20 hover:bg-white/30 border border-white/30"
             />
-            <button class="btn-tennis-secondary px-6 py-3">
+            <button class="btn px-6 py-3">
               Anmelden
             </button>
           </div>
@@ -206,6 +232,11 @@
 </template>
 
 <script setup>
+// Use the default layout (with tennis ball)
+definePageMeta({
+  layout: 'default'
+})
+
 // SEO meta tags
 useSeoMeta({
   title: 'Home - TUS Traunreut Tennis',

@@ -1,12 +1,9 @@
 <template>
   <UApp>
-    <!-- App Header -->
-    <AppHeader />
-    
-    <!-- Main content area where pages are rendered -->
-    <main>
+    <!-- Pages will use their specified layout -->
+    <NuxtLayout>
       <NuxtPage />
-    </main>
+    </NuxtLayout>
   </UApp>
 </template>
 

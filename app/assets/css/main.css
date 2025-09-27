@@ -62,18 +62,20 @@ body {
   --color-border-secondary: var(--color-secondary-100);
   --color-border-focus: var(--color-primary-500);
 
-  /* Legacy Variables (for backward compatibility) */
   --tennis-green-dark: var(--color-primary-600);
   --tennis-green: var(--color-primary-500);
   --tennis-green-light: var(--color-primary-300);
   --tennis-secondary: var(--color-secondary-900);
   --tennis-secondary-light: var(--color-secondary-700);
   --tennis-secondary-dark: var(--color-secondary-950);
+
+  /* Extra colors */
+  --tennis-ball: #bfff00;
 }
 
 /* Custom application styles */
 .tennis-gradient {
-  background: linear-gradient(135deg, var(--tennis-green) 0%, var(--tennis-green-dark) 100%);
+  background: linear-gradient(15deg, var(--tennis-secondary-dark) 5%, var(--tennis-green-dark) 100%);
 }
 
 .tennis-secondary-gradient {
@@ -311,6 +313,7 @@ body {
 /* Button Components */
 .btn {
   @apply inline-flex items-center justify-center font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  @apply bg-white/20 hover:bg-white/30 text-white border border-white/30 px-8 py-3 rounded-lg;
   border-radius: var(--radius-lg);
   cursor: pointer;
   text-decoration: none;

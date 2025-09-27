@@ -5,7 +5,16 @@ export default defineNuxtConfig({
   modules: ['@nuxt/ui', // '@nuxt/scripts',
   // '@nuxt/content'
   '@nuxt/icon', '@nuxt/eslint', '@nuxt/image'],
- 
+
+  // Static Site Generation preset
+  ssr: true,
+  nitro: {
+    prerender: {
+      routes: ['/']
+    },
+    compressPublicAssets: true
+  },
+
   // Performance optimizations
   experimental: {
     payloadExtraction: false,
@@ -36,10 +45,6 @@ export default defineNuxtConfig({
   // CSS configuration - following Nuxt 4 guide
   css: ['~/assets/css/main.css'],
   
-  // Build optimization
-  nitro: {
-    compressPublicAssets: true
-  },
   
   // UI configuration - @nuxt/ui handles global styles automatically
   
