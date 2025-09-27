@@ -30,7 +30,7 @@ export default defineNuxtConfig({
        indent: 2,
        blockSpacing: true
       }
-    }
+    },
   },
   
   // CSS configuration - following Nuxt 4 guide
