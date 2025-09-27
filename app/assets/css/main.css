@@ -252,59 +252,6 @@ body {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* Legacy Typography Classes (for backward compatibility) */
-.title {
-  @apply heading-xl;
-}
-
-.title-lg {
-  @apply display-lg;
-}
-
-.title-xl {
-  @apply display-xl;
-}
-
-.title-hero {
-  @apply display-2xl-dark;
-}
-
-.text-body {
-  @apply body-md;
-}
-
-.text-body-lg {
-  @apply body-lg;
-}
-
-.text-body-sm {
-  @apply body-sm;
-}
-
-.text-body-dark {
-  @apply body-md-dark;
-}
-
-.text-body-lg-dark {
-  @apply body-lg-dark;
-}
-
-.text-body-sm-dark {
-  @apply body-sm-dark;
-}
-
-.text-muted-dark {
-  @apply caption-lg-dark;
-}
-
-.text-accent {
-  @apply text-primary font-medium;
-}
-
-.text-accent-dark {
-  @apply text-inverse font-medium;
-}
-
 /* Design System Spacing Scale */
 :root {
   /* Custom spacing tokens for consistent layouts */
@@ -626,15 +573,6 @@ body {
 
 .section-xl {
   padding: var(--space-layout-xl) 0;
-}
-
-/* Legacy Tennis Button Classes (for backward compatibility) */
-.btn-tennis-primary {
-  @apply btn btn-md btn-primary;
-}
-
-.btn-tennis-secondary {
-  @apply btn btn-md btn-secondary;
 }
 
 /* Tennis section styling */

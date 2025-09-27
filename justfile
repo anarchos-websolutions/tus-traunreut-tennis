@@ -12,7 +12,12 @@ default:
 
 npm *args:
     #!/bin/bash
-    docker run --rm -v "{{DOCKER_VOLUME}}" -w "{{DOCKER_WORKDIR}}" --env TZ=Europe/Berlin -u node {{DOCKER_IMAGE}} /bin/sh -c "npm {{args}}"
+    if [ -y "$LINT_STAGE"]; then
+        TTY_FLAGS='-it'
+    else
+        TTY_FLAGS='i'
+    fi
+    docker run $TTY_FLAGS --rm -v "{{DOCKER_VOLUME}}" -w "{{DOCKER_WORKDIR}}" --env TZ=Europe/Berlin -u node {{DOCKER_IMAGE}} /bin/sh -c "npm {{args}}"
 
 # Install dependencies
 install:
@@ -22,7 +27,7 @@ install:
 # Start development server
 dev:
     @echo "Starting development server in Docker container..."
-    @just npm "run dev"
+    npm run dev
 
 # Build for production
 build:
@@ -32,7 +37,7 @@ build:
 # Preview production build
 preview:
     @echo "Previewing production build in Docker container..."
-    @just npm run preview"
+    npm run preview
 
 # Clean node_modules and package-lock.json
 clean:

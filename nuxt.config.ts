@@ -2,13 +2,10 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: [
-    '@nuxt/ui',
-    '@nuxt/icon'
-    // '@nuxt/scripts', // Temporarily disabled for debugging
-    // '@nuxt/content' // Temporarily disabled for debugging
-  ],
-  
+  modules: ['@nuxt/ui', // '@nuxt/scripts',
+  // '@nuxt/content'
+  '@nuxt/icon', '@nuxt/eslint'],
+ 
   // Performance optimizations
   experimental: {
     payloadExtraction: false,
@@ -22,6 +19,16 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
       htmlAttrs: {
         lang: 'de'
+      }
+    }
+  },
+
+  eslint: {
+    config: {
+      stylistic: {
+       semi: true,
+       indent: 2,
+       blockSpacing: true
       }
     }
   },

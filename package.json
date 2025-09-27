@@ -7,16 +7,22 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "lint:prettier": "prettier ./**/*.{js,json,md,ts,vue,yaml,yml} --check",
+    "lint:eslint": "eslint ./**/*.{js,ts}",
+    "lintfix": "eslint . --fix; prettier --write --list-different ."
   },
   "dependencies": {
     "@googlemaps/markerclusterer": "^2.6.2",
     "@nuxt/content": "^3.7.1",
+    "@nuxt/eslint": "^1.9.0",
     "@nuxt/icon": "^2.0.0",
     "@nuxt/scripts": "^0.12.1",
     "@nuxt/ui": "^4.0.0",
     "@unhead/vue": "^2.0.17",
     "better-sqlite3": "^12.4.1",
+    "eslint": "^9.36.0",
     "nuxt": "^4.1.2",
     "typescript": "^5.9.2",
     "vue": "^3.5.21",
