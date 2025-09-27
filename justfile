@@ -1,19 +1,18 @@
-# Justfile for TUS Tennis Traunreut Website
+# Justfile
 # Runs npm commands in a Node.js 24 Docker environment
 
 # Docker configuration
 DOCKER_IMAGE := "node:24"
-DOCKER_VOLUME := "{{justfile_directory()}}:/app"
+DOCKER_VOLUME := "$PWD:/app"
 DOCKER_WORKDIR := "/app"
-DOCKER_PORT := "3000:3000"
-
-npm *args:
-    #!/bin/bash
-    docker run --rm -v "{{DOCKER_VOLUME}}" -w "{{DOCKER_WORKDIR}}" "{{DOCKER_IMAGE}}" npm {{args}}
 
 # Default recipe - shows available commands
 default:
     @just --list
+
+npm *args:
+    #!/bin/bash
+    docker run --rm -v "{{DOCKER_VOLUME}}" -w "{{DOCKER_WORKDIR}}" --env TZ=Europe/Berlin -u node {{DOCKER_IMAGE}} /bin/sh -c "npm {{args}}"
 
 # Install dependencies
 install:
