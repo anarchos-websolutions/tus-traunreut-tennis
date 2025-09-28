@@ -48,15 +48,14 @@
             </h1>
           </div>
           
-          <div class="w-32 h-1 bg-gray-900 mx-auto mb-6"></div>
             <p class="text-body-lg-dark mb-8">
               der Turn- und Sportverein im Herzen des Chiemgaus
             </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-36">
-            <NuxtLink to="/booking" class="btn">
+          <div class="flex flex-col sm:flex-row gap-4 justify-center pt-32">
+            <NuxtLink to="https://sportbuchung-traunreut.ebusy.de/" class="btn btn-outline">
               Jetzt buchen
             </NuxtLink>
-            <NuxtLink to="/anlagen" class="btn">
+            <NuxtLink to="/anlagen" class="btn btn-outline">
               Tennishalle
             </NuxtLink>
           </div>
