@@ -43,10 +43,6 @@ const tennisBall = ref(null)
 const lastScrollPosition = ref(0)
 const isAtTop = computed(() => y.value < 400)
 
-watch(isAtTop, () => {
-  console.log("xxx is at top", isAtTop.value)
-})
-
 // Handle scroll event to rotate tennis ball
 const handleScroll = () => {
   const scrollY = window.scrollY
