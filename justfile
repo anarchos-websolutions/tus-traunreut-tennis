@@ -1,8 +1,8 @@
 # Justfile
-# Runs npm commands in a Node.js 24 Docker environment
+# Runs bun commands in a Bun Docker environment
 
 # Docker configuration
-DOCKER_IMAGE := "node:latest"
+DOCKER_IMAGE := "oven/bun:latest"
 DOCKER_VOLUME := "$PWD:/app"
 DOCKER_WORKDIR := "/app"
 
@@ -10,52 +10,52 @@ DOCKER_WORKDIR := "/app"
 default:
     @just --list
 
-npm *args:
+bun *args:
     #!/bin/bash
     if [ -y "$LINT_STAGE"]; then
         TTY_FLAGS='-it'
     else
         TTY_FLAGS='i'
     fi
-    docker run $TTY_FLAGS --rm -v "{{DOCKER_VOLUME}}" -w "{{DOCKER_WORKDIR}}" --env TZ=Europe/Berlin -u node {{DOCKER_IMAGE}} /bin/sh -c "npm {{args}}"
+    docker run $TTY_FLAGS --rm -v "{{DOCKER_VOLUME}}" -w "{{DOCKER_WORKDIR}}" --env TZ=Europe/Berlin {{DOCKER_IMAGE}} /bin/sh -c "bun {{args}}"
 
 # Install dependencies
 install:
     @echo "Installing dependencies in Docker container..."
-    @just npm install
+    @just bun install
 
 # Start development server
 dev:
     @echo "Starting development server in Docker container..."
-    npm run dev
+    bun run dev
 
 # Build for production
 build:
     @echo "Building for production in Docker container..."
-    @just npm run build
+    @just bun run build
 
 # Preview production build
 preview:
     @echo "Previewing production build in Docker container..."
-    npm run preview
+    bun run preview
 
 # Clean node_modules and package-lock.json
 clean:
     @echo "Cleaning node_modules and package-lock.json..."
-    rm -rf node_modules package-lock.json
+    rm -rf node_modules bun.lockb
     @echo "Clean complete!"
 
 lint:
     @echo "Linting code"
-    @just npm run lint
+    @just bun run lint
 
 lintfix:
     @echo "Linting code and fixing issues"
-    @just npm run lintfix
+    @just bun run lintfix
 
 generate:
     @echo "Generating nuxt stuff"
-    npm run generate
+    bun run generate
 
 # Full setup - clean, install, and start dev server
 setup: clean install generate
@@ -66,5 +66,5 @@ info:
     docker --version
     @echo "Node.js version in container:"
     docker run --rm "{{DOCKER_IMAGE}}" node --version
-    @echo "NPM version in container:"
-    docker run --rm "{{DOCKER_IMAGE}}" npm --version
+    @echo "Bun version in container:"
+    docker run --rm "{{DOCKER_IMAGE}}" bun --version

@@ -11,5 +11,7 @@
         ".cursorrules": true,
         "package.json": true,
     },
-    "search.useIgnoreFiles": true
+    "search.useIgnoreFiles": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
 }
