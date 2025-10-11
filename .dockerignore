@@ -1,0 +1,39 @@
+# Dependencies
+node_modules
+bun.lockb
+
+# Build outputs
+.nuxt
+.output
+dist
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE files
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# Documentation
+README.md
+docs/
+
+# Docker files
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Justfile
+justfile
