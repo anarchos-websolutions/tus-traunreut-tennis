@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   modules: [// '@nuxt/scripts',
     '@nuxt/ui', // '@nuxt/content'
-    '@nuxt/icon', '@nuxt/eslint', '@nuxt/image', 'nuxt-mail'],
+    '@nuxt/icon', '@nuxt/eslint', '@nuxt/image'],
 
   // Static Site Generation preset
   ssr: true,
