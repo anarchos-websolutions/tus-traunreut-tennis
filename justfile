@@ -33,7 +33,7 @@ bun *args:
     if [ -y "$LINT_STAGE"]; then
         TTY_FLAGS='-it'
     else
-        TTY_FLAGS='i'
+        TTY_FLAGS=''
     fi
     docker run $TTY_FLAGS --rm -v "{{DOCKER_VOLUME}}" -w "{{DOCKER_WORKDIR}}" --env TZ=Europe/Berlin --user $USER_ID:$GROUP_ID {{DOCKER_IMAGE}} /bin/sh -c "bun {{args}}"
 

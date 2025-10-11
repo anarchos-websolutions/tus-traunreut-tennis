@@ -1,8 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/ui', // '@nuxt/scripts',
-  // '@nuxt/content'
-    '@nuxt/icon', '@nuxt/eslint', '@nuxt/image'],
+  modules: [// '@nuxt/scripts',
+    '@nuxt/ui', // '@nuxt/content'
+    '@nuxt/icon', '@nuxt/eslint', '@nuxt/image', 'nuxt-mail'],
 
   // Static Site Generation preset
   ssr: true,
@@ -29,19 +29,22 @@ export default defineNuxtConfig({
 
   // Runtime configuration for server-only secrets and public values
   runtimeConfig: {
-    // SMTP configuration (server-only)
-    smtpHost: process.env.SMTP_HOST,
-    smtpPort: process.env.SMTP_PORT,
-    smtpUser: process.env.SMTP_USER,
-    smtpPass: process.env.SMTP_PASS,
-    smtpFrom: process.env.SMTP_FROM,
-    smtpSecure: process.env.SMTP_SECURE,
-    // Recipient groups (comma-separated emails)
-    boardEmails: process.env.BOARD_EMAILS,
-    coachEmails: process.env.COACH_EMAILS,
-    memberEmails: process.env.MEMBER_EMAILS,
+    // Private keys (only available on server-side)
+    cloudflareWorkersSecret: process.env.CLOUDFLARE_WORKERS_SECRET,
+
+    // Public keys (exposed to client-side)
     public: {
-      // no public values needed yet
+      cloudflareWorkersUrl: process.env.CLOUDFLARE_WORKERS_URL || 'https://your-worker.your-subdomain.workers.dev',
+    },
+
+    mail: {
+      message: {
+        to: 'foo@bar.de',
+      },
+      smtp: {
+        host: 'smtp.example.com',
+        port: 587,
+      },
     },
   },
 

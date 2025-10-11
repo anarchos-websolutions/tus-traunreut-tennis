@@ -4,8 +4,8 @@
     <section class="relative text-white overflow-hidden min-h-[70vh] flex items-center">
       <!-- Background Image -->
       <NuxtImg
-        src="/images/IMG_4715-min-scaled.jpeg"
         v-slot="{ src, isLoaded, imgAttrs }"
+        src="/images/IMG_4715-min-scaled.jpeg"
         alt="Tennis court background"
         class="absolute inset-0 w-full h-full object-cover"
         :style="{ zIndex: -1 }"

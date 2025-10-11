@@ -13,5 +13,15 @@
     },
     "search.useIgnoreFiles": true,
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "files.associations": {
+        "*.css": "tailwindcss"
+      },
+      "editor.quickSuggestions": {
+        "strings": "on"
+      },
+      "tailwindCSS.classAttributes": ["class", "ui"],
+      "tailwindCSS.experimental.classRegex": [
+        ["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+      ]
 }
