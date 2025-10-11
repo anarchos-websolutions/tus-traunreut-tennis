@@ -34,17 +34,7 @@ export default defineNuxtConfig({
 
     // Public keys (exposed to client-side)
     public: {
-      cloudflareWorkersUrl: process.env.CLOUDFLARE_WORKERS_URL || 'https://your-worker.your-subdomain.workers.dev',
-    },
-
-    mail: {
-      message: {
-        to: 'foo@bar.de',
-      },
-      smtp: {
-        host: 'smtp.example.com',
-        port: 587,
-      },
+      cloudflareWorkersUrl: process.env.CLOUDFLARE_WORKERS_URL || 'https://tus-traunreut-tennis.markus-obermaier420.workers.dev/',
     },
   },
 
