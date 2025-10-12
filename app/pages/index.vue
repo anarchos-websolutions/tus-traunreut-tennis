@@ -5,7 +5,7 @@
       <!-- Background Image -->
       <NuxtImg
         v-slot="{ src, isLoaded, imgAttrs }"
-        src="/images/IMG_4715-min-scaled.jpeg"
+        src="/images/tennisplatz.jpeg"
         alt="Tennis court background"
         class="absolute inset-0 w-full h-full object-cover"
         :style="{ zIndex: -1 }"
@@ -57,7 +57,7 @@
               Jetzt buchen
             </NuxtLink>
             <NuxtLink
-              to="/anlagen"
+              to="/tennishalle"
               class="btn btn-outline"
             >
               Tennishalle
