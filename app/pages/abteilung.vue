@@ -1,19 +1,9 @@
 <template>
   <div class="min-h-screen">
-    <!-- Page Header -->
-    <section class="tennis-gradient text-white py-16">
-      <UContainer>
-        <div class="text-center">
-          <h1 class="display-xl-dark mb-4">
-            <span class="text-[var(--color-secondary-200)]">Abteilungsleitung</span>
-          </h1>
-          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto mb-6" />
-          <p class="body-lg-dark">
-            Lernen Sie unser engagiertes Führungsteam kennen
-          </p>
-        </div>
-      </UContainer>
-    </section>
+    <PageHeader
+      title="Abteilungsleitung"
+      description="Lernen Sie unser engagiertes Führungsteam kennen"
+    />
 
     <!-- Leadership Team -->
     <section class="py-16 bg-white">

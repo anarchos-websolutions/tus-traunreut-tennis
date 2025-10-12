@@ -1,15 +1,10 @@
 <template>
-  <div>
+  <div class="min-h-screen">
+    <PageHeader
+      title="Schwarzes Brett"
+      description="Teile Mitteilungen an ausgewählte Empfänger inklusive Bild."
+    />
     <UContainer class="py-10">
-      <div class="mb-8">
-        <h1 class="title">
-          Schwarzes Brett
-        </h1>
-        <p class="text-body mt-2">
-          Teile Mitteilungen an ausgewählte Empfänger inklusive Bild.
-        </p>
-      </div>
-
       <UCard>
         <UForm
           :schema="schema"

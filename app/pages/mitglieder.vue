@@ -1,19 +1,9 @@
 <template>
   <div class="min-h-screen">
-    <!-- Page Header -->
-    <section class="tennis-gradient text-white py-16">
-      <UContainer>
-        <div class="text-center">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">
-            <span class="text-[var(--color-secondary-200)]">Mitglieder</span>
-          </h1>
-          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto mb-6" />
-          <p class="text-xl text-green-100">
-            Werden Sie Teil unserer Tennisfamilie
-          </p>
-        </div>
-      </UContainer>
-    </section>
+    <PageHeader
+      title="Mitglieder"
+      description="Werden Sie Teil unserer Tennisfamilie"
+    />
 
     <!-- Membership Benefits -->
     <section class="py-16 bg-white">

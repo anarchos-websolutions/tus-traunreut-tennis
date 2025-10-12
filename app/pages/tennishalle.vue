@@ -1,19 +1,9 @@
 <template>
   <div class="min-h-screen">
-    <!-- Page Header -->
-    <section class="tennis-gradient text-white py-16">
-      <UContainer>
-        <div class="text-center">
-          <h1 class="display-xl-dark mb-4">
-            <span class="text-[var(--color-secondary-200)]">Tennisplätze</span>
-          </h1>
-          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto mb-6" />
-          <p class="body-lg-dark">
-            Moderne Tennisanlagen für optimales Spielvergnügen
-          </p>
-        </div>
-      </UContainer>
-    </section>
+    <PageHeader
+      title="Tennisplätze"
+      description="Moderne Tennisanlagen für optimales Spielvergnügen"
+    />
 
     <!-- Facilities Overview -->
     <section class="py-16 bg-white">

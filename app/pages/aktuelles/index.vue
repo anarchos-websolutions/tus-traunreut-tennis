@@ -1,19 +1,9 @@
 <template>
   <div class="min-h-screen">
-    <!-- Page Header -->
-    <section class="tennis-gradient text-white py-16">
-      <UContainer>
-        <div class="text-center">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">
-            <span class="text-[var(--color-secondary-200)]">Aktuelles</span>
-          </h1>
-          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto mb-6" />
-          <p class="text-xl text-green-100">
-            Neuigkeiten und Berichte aus der Tennisabteilung
-          </p>
-        </div>
-      </UContainer>
-    </section>
+    <PageHeader
+      title="Aktuelles"
+      description="Neuigkeiten und Berichte aus der Tennisabteilung"
+    />
 
     <!-- Latest News -->
     <section class="py-16 bg-white">
@@ -233,7 +223,10 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <!-- Berichte -->
-          <div class="tennis-card p-6 text-center">
+          <NuxtLink
+            to="/aktuelles/berichte"
+            class="tennis-card p-6 text-center"
+          >
             <Icon
               name="heroicons:document-text"
               class="w-12 h-12 mx-auto mb-4"
@@ -248,8 +241,8 @@
             <p class="text-gray-600 text-sm mb-4">
               Berichte von Turnieren, Events und besonderen Ereignissen
             </p>
-            <span class="text-orange-600 text-sm font-medium">3 Artikel</span>
-          </div>
+            <span class="text-orange-600 text-sm font-medium">{{ reports.length }} Artikel</span>
+          </NuxtLink>
 
           <!-- Termine -->
           <div class="tennis-card p-6 text-center">
@@ -331,6 +324,10 @@ const { data: allContent } = await useAsyncData('all-content', () =>
   queryCollection('content').all(),
 );
 
+const { data: reports } = await useAsyncData('reports', () =>
+  queryCollection('content').where('path', 'LIKE', '/reports/%').all(),
+);
+
 // Fetch blog articles specifically
 /* const { data: blogArticles } = await useAsyncData('blog-articles', () =>
   queryCollection('content').where('path', 'LIKE', '/blog/%').all(),
@@ -338,5 +335,9 @@ const { data: allContent } = await useAsyncData('all-content', () =>
 
 watch(allContent, () => {
   logger.debug('all content files', allContent.value);
+}, { immediate: true });
+
+watch(reports, () => {
+  logger.debug('reports', reports.value);
 }, { immediate: true });
 </script>
