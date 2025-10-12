@@ -8,6 +8,8 @@
       <slot />
     </main>
 
+    <AppFooter />
+
     <!-- Floating Tennis Ball - Bottom Left -->
     <button
       ref="tennisBall"

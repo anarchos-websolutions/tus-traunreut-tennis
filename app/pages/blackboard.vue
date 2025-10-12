@@ -77,7 +77,6 @@
         </UForm>
       </UCard>
     </UContainer>
-    <AppFooter />
   </div>
 </template>
 

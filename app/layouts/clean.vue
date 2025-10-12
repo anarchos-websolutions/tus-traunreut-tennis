@@ -8,6 +8,8 @@
       <slot />
     </main>
 
+    <AppFooter />
+
     <!-- No tennis ball on this layout -->
   </div>
 </template>

@@ -69,7 +69,7 @@ lint:
 
 lintfix:
     @echo "Linting code and fixing issues"
-    @just bun run lintfix
+    bun run lintfix
 
 generate:
     @echo "Generating nuxt stuff"

@@ -20,46 +20,58 @@
       <UContainer>
         <div class="space-y-8">
           <!-- News Article 1 -->
-          <article class="tennis-card p-8">
-            <div class="flex flex-col md:flex-row gap-6">
-              <div class="md:w-1/4">
-                <div class="bg-gray-200 rounded-lg aspect-video flex items-center justify-center">
-                  <Icon
-                    name="heroicons:photo"
-                    class="w-16 h-16 text-gray-400"
-                  />
+          <NuxtLink
+            to="/aktuelles/platz-sanierung-2025"
+            class="block"
+          >
+            <article
+              class="tennis-card p-8 hover:shadow-lg transition-shadow duration-300 cursor-pointer group"
+            >
+              <div class="flex flex-col md:flex-row gap-6">
+                <div class="md:w-1/4">
+                  <div
+                    class="bg-gray-200 rounded-lg aspect-video flex items-center justify-center group-hover:bg-gray-300 transition-colors duration-300"
+                  >
+                    <Icon
+                      name="heroicons:photo"
+                      class="w-16 h-16 text-gray-400 group-hover:text-gray-500 transition-colors duration-300"
+                    />
+                  </div>
+                </div>
+                <div class="md:w-3/4">
+                  <div class="flex items-center gap-4 mb-3">
+                    <span
+                      class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium"
+                    >
+                      Saison 2025
+                    </span>
+                    <span class="text-gray-500 text-sm">März 11, 2021</span>
+                  </div>
+                  <h2
+                    class="text-2xl font-bold mb-4 group-hover:text-orange-600 transition-colors duration-300"
+                    style="color: var(--tennis-green-dark)"
+                  >
+                    Plätze werden saniert und vorbereitet
+                  </h2>
+                  <p class="text-gray-600 mb-4">
+                    Das Tennis-Spielen kann bald losgehen, mit dem herrichten der Plätze wird bald
+                    begonnen!
+                    Die Außenplätze werden professionell aufbereitet und für die neue Saison
+                    vorbereitet.
+                  </p>
+                  <p class="text-gray-600 mb-4">
+                    <strong>Wichtiger Hinweis:</strong> Spielen nur nach vorheriger Buchung möglich.
+                    Nutzen Sie unser Online-Buchungssystem oder rufen Sie uns an.
+                  </p>
+                  <div
+                    class="text-orange-600 group-hover:text-orange-700 font-medium transition-colors duration-300"
+                  >
+                    Artikel lesen →
+                  </div>
                 </div>
               </div>
-              <div class="md:w-3/4">
-                <div class="flex items-center gap-4 mb-3">
-                  <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
-                    Saison 2025
-                  </span>
-                  <span class="text-gray-500 text-sm">März 11, 2021</span>
-                </div>
-                <h2
-                  class="text-2xl font-bold mb-4"
-                  style="color: var(--tennis-green-dark)"
-                >
-                  Plätze werden saniert und vorbereitet
-                </h2>
-                <p class="text-gray-600 mb-4">
-                  Das Tennis-Spielen kann bald losgehen, mit dem herrichten der Plätze wird bald begonnen!
-                  Die Außenplätze werden professionell aufbereitet und für die neue Saison vorbereitet.
-                </p>
-                <p class="text-gray-600 mb-4">
-                  <strong>Wichtiger Hinweis:</strong> Spielen nur nach vorheriger Buchung möglich.
-                  Nutzen Sie unser Online-Buchungssystem oder rufen Sie uns an.
-                </p>
-                <NuxtLink
-                  to="/booking"
-                  class="text-orange-600 hover:text-orange-700 font-medium"
-                >
-                  Jetzt Platz buchen →
-                </NuxtLink>
-              </div>
-            </div>
-          </article>
+            </article>
+          </NuxtLink>
 
           <!-- News Article 2 -->
           <article class="tennis-card p-8">
@@ -74,7 +86,9 @@
               </div>
               <div class="md:w-3/4">
                 <div class="flex items-center gap-4 mb-3">
-                  <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                  <span
+                    class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"
+                  >
                     Information
                   </span>
                   <span class="text-gray-500 text-sm">März 11, 2021</span>
@@ -130,11 +144,14 @@
                   Neue Abteilungsleitung übernimmt das Ruder
                 </h2>
                 <p class="text-gray-600 mb-4">
-                  Nach zwölf erfolgreichen Jahren hat Christel Hofmann die Leitung der Tennisabteilung abgegeben.
-                  Das neue Führungsteam bestehend aus Markus Petzka, Tino Trefil und Markus Luprich übernimmt die Verantwortung.
+                  Nach zwölf erfolgreichen Jahren hat Christel Hofmann die Leitung der Tennisabteilung
+                  abgegeben.
+                  Das neue Führungsteam bestehend aus Markus Petzka, Tino Trefil und Markus Luprich
+                  übernimmt die Verantwortung.
                 </p>
                 <p class="text-gray-600 mb-4">
-                  Ein Schwerpunkt der neuen Leitung liegt auf der Digitalisierung und der Zusammenführung von
+                  Ein Schwerpunkt der neuen Leitung liegt auf der Digitalisierung und der
+                  Zusammenführung von
                   Abteilung und Tennishalle unter einem Dach. Das neue Online-Buchungssystem soll die
                   Platzauslastung optimieren.
                 </p>
@@ -322,9 +339,6 @@
         </div>
       </UContainer>
     </section>
-
-    <!-- Footer -->
-    <AppFooter />
   </div>
 </template>
 

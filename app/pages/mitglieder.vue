@@ -554,9 +554,6 @@
         </div>
       </UContainer>
     </section>
-
-    <!-- Footer -->
-    <AppFooter />
   </div>
 </template>
 

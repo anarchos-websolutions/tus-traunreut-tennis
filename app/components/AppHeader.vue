@@ -37,7 +37,7 @@
           </template>
           <NuxtLink
             to="/blackboard"
-            class="btn btn-primary"
+            class="btn btn-ghost"
           >
             <Icon
               name="entypo:blackboard"
@@ -50,7 +50,7 @@
             class="btn btn-primary"
             @click="mobileMenuOpen = false"
           >
-            Jetzt Buchen
+            Buchen
           </NuxtLink>
         </nav>
         <!-- Mobile Menu Button -->

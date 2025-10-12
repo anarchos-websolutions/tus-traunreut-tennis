@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt --bun dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
@@ -19,11 +19,15 @@
     "@nuxt/ui": "^4.0.0",
     "@types/node": "^24.5.2",
     "@unhead/vue": "^2.0.17",
+    "@nuxt/content": "^3.7.1",
     "eslint": "^9.36.0",
     "nuxt": "^4.1.2",
     "typescript": "^5.9.3",
     "vue": "^3.5.21",
     "vue-router": "^4.5.1",
     "vue-tsc": "^3.1.0"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.4.1"
   }
 }
