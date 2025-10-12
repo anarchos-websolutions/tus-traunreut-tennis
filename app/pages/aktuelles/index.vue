@@ -311,34 +311,7 @@
       </UContainer>
     </section>
 
-    <!-- Newsletter Signup -->
-    <section class="py-16 tennis-gradient text-white">
-      <UContainer>
-        <div class="text-center">
-          <h2 class="text-3xl font-bold mb-4">
-            Immer auf dem Laufenden bleiben
-          </h2>
-          <p class="text-lg mb-8 text-green-100">
-            Melden Sie sich für unseren Newsletter an und verpassen Sie keine wichtigen Neuigkeiten mehr
-          </p>
-
-          <div class="max-w-md mx-auto flex gap-4">
-            <input
-              type="email"
-              placeholder="Ihre E-Mail Adresse"
-              class="flex-1 px-4 py-3 rounded-lg text-gray-900"
-            >
-            <button class="btn-tennis-secondary px-6 py-3">
-              Anmelden
-            </button>
-          </div>
-
-          <p class="text-sm text-green-100 mt-4">
-            Wir respektieren Ihre Privatsphäre. Abmeldung jederzeit möglich.
-          </p>
-        </div>
-      </UContainer>
-    </section>
+    <Newsletter />
   </div>
 </template>
 
@@ -352,4 +325,18 @@ useSeoMeta({
   ogImage: '/tennis-news.jpg',
   twitterCard: 'summary_large_image',
 });
+
+// Fetch all content files from the content directory
+const { data: allContent } = await useAsyncData('all-content', () =>
+  queryCollection('content').all(),
+);
+
+// Fetch blog articles specifically
+/* const { data: blogArticles } = await useAsyncData('blog-articles', () =>
+  queryCollection('content').where('path', 'LIKE', '/blog/%').all(),
+); */
+
+watch(allContent, () => {
+  logger.debug('all content files', allContent.value);
+}, { immediate: true });
 </script>
