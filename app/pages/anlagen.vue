@@ -16,7 +16,7 @@
             Unsere <span style="color: var(--color-secondary-900)">Tennisanlage</span>
           </h2>
           <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-            Unsere Anlage bietet zwei Outdoor Tennisplätze sowie eine Tennishalle mit drei Spielfeldern zur Nutzung.
+            Unsere Anlage bietet acht Outdoor Tennisplätze sowie eine Tennishalle mit drei Spielfeldern zur Nutzung.
           </p>
         </div>
 
@@ -45,7 +45,7 @@
                 />
                 <div>
                   <h4 class="font-semibold">
-                    2 Outdoor Plätze
+                    8 Outdoor Plätze
                   </h4>
                   <p class="text-sm">
                     Professionelle Sandplätze mit optimaler Drainage

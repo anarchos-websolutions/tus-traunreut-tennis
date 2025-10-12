@@ -8,13 +8,16 @@
     <!-- Leadership Team -->
     <section class="py-16 bg-white">
       <UContainer>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           <!-- Team Member 1 -->
           <div class="tennis-card p-6 text-center">
-            <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-              <Icon
-                name="heroicons:user"
-                class="w-16 h-16 text-gray-400"
+            <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+              <NuxtImg
+                src="/images/markus-petzka.jpg"
+                alt="Markus Petzka - Abteilungsleiter"
+                class="w-full h-full object-cover"
+                width="128"
+                height="128"
               />
             </div>
             <h3
@@ -27,51 +30,32 @@
               Abteilungsleiter
             </p>
             <p class="text-gray-600 text-sm">
-              Nachfolger von Christel Hofmann, führt die Abteilung mit frischen Ideen in die Zukunft.
+              Lorem Ipsum.
             </p>
           </div>
 
           <!-- Team Member 2 -->
           <div class="tennis-card p-6 text-center">
-            <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-              <Icon
-                name="heroicons:user"
-                class="w-16 h-16 text-gray-400"
+            <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+              <NuxtImg
+                src="/images/patrick-laufke.png"
+                alt="Patrick Laufke - Stellvertretender Abteilungsleiter"
+                class="w-full h-full object-cover"
+                width="128"
+                height="128"
               />
             </div>
             <h3
               class="text-xl font-semibold mb-2"
               style="color: var(--tennis-green-dark)"
             >
-              Tino Trefil
+              Patrick Laufke
             </h3>
             <p class="text-[var(--color-secondary-900)] font-medium mb-3">
-              Stellvertretender Leiter
+              Stellvertretender Abteilungsleiter
             </p>
             <p class="text-gray-600 text-sm">
-              Teil des Dreigespanns an der Abteilungsspitze, unterstützt bei der strategischen Ausrichtung.
-            </p>
-          </div>
-
-          <!-- Team Member 3 -->
-          <div class="tennis-card p-6 text-center">
-            <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-              <Icon
-                name="heroicons:user"
-                class="w-16 h-16 text-gray-400"
-              />
-            </div>
-            <h3
-              class="text-xl font-semibold mb-2"
-              style="color: var(--tennis-green-dark)"
-            >
-              Markus Luprich
-            </h3>
-            <p class="text-[var(--color-secondary-900)] font-medium mb-3">
-              Stellvertretender Leiter
-            </p>
-            <p class="text-gray-600 text-sm">
-              Komplettiert das Führungsteam und bringt wertvolle Erfahrung in die Vereinsführung ein.
+              Lorem Ipsum.
             </p>
           </div>
         </div>
