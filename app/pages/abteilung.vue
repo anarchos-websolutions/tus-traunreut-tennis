@@ -66,110 +66,20 @@
     <section class="py-16">
       <UContainer>
         <div class="p-8">
-          <h2
-            class="heading-xl mb-6 text-center"
-          >
-            Neue Führung - Neue Perspektiven
-          </h2>
+          <div class="text-center mb-12">
+            <h2
+              class="heading-xl mb-4"
+            >
+              Neue Führung - Neue Perspektiven
+            </h2>
+            <div class="w-32 h-1 bg-secondary-900 mx-auto" />
+          </div>
 
           <div class="prose prose-lg mx-auto text-gray-600">
             <p class="mb-6">
-              Nach zwölf Jahren hat <strong>Christel Hofmann</strong> die Leitung der Tennisabteilung des TuS Traunreut abgegeben.
-              Ihr Nachfolger ist <strong>Markus Petzka</strong>, der zusammen mit <strong>Tino Trefil</strong> und
-              <strong>Markus Luprich</strong> jetzt ein Dreigespann an der Abteilungsspitze bildet.
+              Seit dem 10. Oktober 2025 ist die neue Abteilungsleitung im Amt.
+              Mit frischem Wind für den Tennis-Sport und neuen Perspektiven für die Zukunft stellt sich die neue Abteilungsleitung, bestehend aus <strong>Markus Petzka</strong> und <strong>Patrick Laufke</strong>, den Herausforderungen.
             </p>
-
-            <p class="mb-6">
-              Um die Zukunftsfähigkeit des Tennissports zu stärken und zu sichern, hat man sich auch darauf verständigt,
-              die Abteilung und die Tennishalle unter einem Dach zusammenzuführen.
-            </p>
-
-            <p class="mb-6">
-              Durch die Einführung eines <strong>Online-Buchungssystems</strong>, das eine nahtlose und benutzerfreundliche
-              Buchung mit dem Smartphone oder einem Computer ermöglicht, verspricht sich die neue Abteilungsleitung auch
-              eine bessere Auslastung der Tennishalle.
-            </p>
-          </div>
-
-          <div class="text-center mt-8">
-            <NuxtLink
-              to="/booking"
-              class="btn-tennis-secondary"
-            >
-              Online-Buchungssystem nutzen
-            </NuxtLink>
-          </div>
-        </div>
-      </UContainer>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="py-16">
-      <UContainer>
-        <div class="text-center mb-12">
-          <h2
-            class="heading-xl mb-4"
-          >
-            Kontakt zur Abteilungsleitung
-          </h2>
-          <div class="w-32 h-1 bg-secondary-900 mx-auto" />
-        </div>
-
-        <div class="tennis-card p-8">
-          <div class="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3
-                class="text-xl font-semibold mb-4"
-                style="color: var(--tennis-green-dark)"
-              >
-                Allgemeine Anfragen
-              </h3>
-              <div class="space-y-3">
-                <div class="flex items-center">
-                  <Icon
-                    name="heroicons:envelope"
-                    class="w-5 h-5 mr-3"
-                    style="color: var(--color-secondary-900)"
-                  />
-                  <span class="text-gray-600">info@tennis-traunreut.de</span>
-                </div>
-                <div class="flex items-center">
-                  <Icon
-                    name="heroicons:phone"
-                    class="w-5 h-5 mr-3"
-                    style="color: var(--color-secondary-900)"
-                  />
-                  <span class="text-gray-600">+49 (0) 8669 - 2971</span>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h3
-                class="text-xl font-semibold mb-4"
-                style="color: var(--tennis-green-dark)"
-              >
-                Tennishalle
-              </h3>
-              <div class="space-y-3">
-                <div class="flex items-center">
-                  <Icon
-                    name="heroicons:envelope"
-                    class="w-5 h-5 mr-3"
-                    style="color: var(--color-secondary-900)"
-                  />
-                  <span class="text-gray-600">info@tennishalle-traunreut.de</span>
-                </div>
-                <div class="flex items-center">
-                  <Icon
-                    name="heroicons:map-pin"
-                    class="w-5 h-5 mr-3"
-                    style="color: var(--color-secondary-900)"
-                  />
-                  <span class="text-gray-600">Traunring 118, 83301 Traunreut</span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </UContainer>
