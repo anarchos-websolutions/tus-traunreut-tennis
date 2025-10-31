@@ -1,13 +1,13 @@
 <template>
   <div class="min-h-screen">
     <!-- Hero Section -->
-    <section class="relative text-white overflow-hidden min-h-[70vh] flex items-center">
+    <section class="relative text-white overflow-hidden min-h-[70vh] flex items-center -mt-[80px] pt-[80px]">
       <!-- Background Image -->
       <NuxtImg
         v-slot="{ src, isLoaded, imgAttrs }"
         src="/images/tennisplatz.jpeg"
         alt="Tennis court background"
-        class="absolute inset-0 w-full h-full object-cover z-[-1]"
+        class="absolute inset-0 w-full h-full object-cover object-top z-[-1]"
         loading="eager"
         preload
         format="webp"

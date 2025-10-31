@@ -141,20 +141,23 @@ const SCROLL_THRESHOLD = 10;
 const TRANSITION_DURATION = 700; // matches CSS duration-700
 
 watch(scrollY, (newY) => {
-  // Prevent rapid toggling during transition
-  if (isTransitioning.value) {
+  // Always show header at the top of the page (most top position)
+  if (newY <= 0 || newY < SCROLL_THRESHOLD) {
+    if (!isHeaderVisible.value) {
+      isHeaderVisible.value = true;
+      if (!isTransitioning.value) {
+        isTransitioning.value = true;
+        setTimeout(() => {
+          isTransitioning.value = false;
+        }, TRANSITION_DURATION);
+      }
+    }
+    lastScrollY.value = newY;
     return;
   }
 
-  // Always show header at the top of the page
-  if (newY < SCROLL_THRESHOLD) {
-    if (!isHeaderVisible.value) {
-      isHeaderVisible.value = true;
-      isTransitioning.value = true;
-      setTimeout(() => {
-        isTransitioning.value = false;
-      }, TRANSITION_DURATION);
-    }
+  // Prevent rapid toggling during transition
+  if (isTransitioning.value) {
     lastScrollY.value = newY;
     return;
   }
