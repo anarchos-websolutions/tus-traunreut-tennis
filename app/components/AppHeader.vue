@@ -1,5 +1,11 @@
 <template>
-  <header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-lg ">
+  <header
+    class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-lg"
+    :style="{
+      transform: isHeaderVisible ? 'translateY(0)' : 'translateY(-100%)',
+      transition: 'transform 700ms cubic-bezier(0.4, 0, 0.2, 1)',
+    }"
+  >
     <UContainer>
       <div class="flex items-center justify-between h-20">
         <!-- Logo -->
@@ -101,7 +107,7 @@
 </template>
 
 <script setup>
-import { useMediaQuery } from '@vueuse/core';
+import { useMediaQuery, useWindowScroll } from '@vueuse/core';
 
 const isXLScreen = useMediaQuery('(min-width: 1280px)');
 
@@ -122,4 +128,57 @@ const route = useRoute();
 watch(() => route.path, () => {
   mobileMenuOpen.value = false;
 });
+
+// Scroll detection for hide/show header
+const { y: scrollY } = useWindowScroll();
+const lastScrollY = ref(0);
+const isHeaderVisible = ref(true);
+const isTransitioning = ref(false);
+
+// Minimum scroll distance to trigger hide/show (prevents flickering)
+const SCROLL_THRESHOLD = 10;
+// Minimum time between transitions (prevents rapid toggling)
+const TRANSITION_DURATION = 700; // matches CSS duration-700
+
+watch(scrollY, (newY) => {
+  // Prevent rapid toggling during transition
+  if (isTransitioning.value) {
+    return;
+  }
+
+  // Always show header at the top of the page
+  if (newY < SCROLL_THRESHOLD) {
+    if (!isHeaderVisible.value) {
+      isHeaderVisible.value = true;
+      isTransitioning.value = true;
+      setTimeout(() => {
+        isTransitioning.value = false;
+      }, TRANSITION_DURATION);
+    }
+    lastScrollY.value = newY;
+    return;
+  }
+
+  // Determine scroll direction
+  const scrollDifference = newY - lastScrollY.value;
+
+  if (scrollDifference > SCROLL_THRESHOLD && isHeaderVisible.value) {
+    // Scrolling down - hide header
+    isHeaderVisible.value = false;
+    isTransitioning.value = true;
+    setTimeout(() => {
+      isTransitioning.value = false;
+    }, TRANSITION_DURATION);
+  }
+  else if (scrollDifference < -SCROLL_THRESHOLD && !isHeaderVisible.value) {
+    // Scrolling up - show header
+    isHeaderVisible.value = true;
+    isTransitioning.value = true;
+    setTimeout(() => {
+      isTransitioning.value = false;
+    }, TRANSITION_DURATION);
+  }
+
+  lastScrollY.value = newY;
+}, { immediate: true });
 </script>
