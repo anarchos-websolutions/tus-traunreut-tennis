@@ -1,7 +1,7 @@
 <template>
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
+  <header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-lg ">
     <UContainer>
-      <div class="flex items-center justify-between h-16">
+      <div class="flex items-center justify-between h-20">
         <!-- Logo -->
         <NuxtLink
           to="/"
@@ -18,15 +18,15 @@
         </NuxtLink>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden xl:flex items-center space-x-6">
+        <nav class="hidden xl:flex items-center space-x-2">
           <template
             v-for="item in navigation"
             :key="item.to"
           >
             <NuxtLink
               :to="item.to"
-              class="px-3 py-2 text-sm font-medium transition-colors hover:text-gray-900"
-              :class="$route.path === item.to ? 'text-gray-900 font-semibold' : 'text-gray-700'"
+              class="px-3 py-2 text-sm font-medium transition-colors hover:text-primary-500"
+              :class="$route.path === item.to ? 'text-primary-500 font-semibold' : 'text-gray-700'"
             >
               {{ item.name }}
             </NuxtLink>
@@ -66,30 +66,34 @@
       <!-- Mobile Menu -->
       <div
         v-if="mobileMenuOpen && !isXLScreen"
-        class="py-4 border-t border-gray-200"
+        class="border-t border-gray-200 "
       >
-        <nav class="flex flex-col space-y-2">
+        <nav class="flex flex-col">
           <template
             v-for="item in navigation"
             :key="item.to"
           >
             <NuxtLink
               :to="item.to"
-              class="px-3 py-2 text-gray-700 hover:text-gray-900"
+              class="text-gray-700 hover:text-primary-500 p-2 py-4"
+              :class="$route.path === item.to ? 'text-primary-500' : ''"
               @click="mobileMenuOpen = false"
             >
               {{ item.name }}
             </NuxtLink>
           </template>
-          <UButton
+          <NuxtLink
+            class="p-2 py-4 flex items-center gap-2 hover:text-primary-500"
+            :class="$route.path === '/blackboard' ? 'text-primary-500' : ''"
             to="/blackboard"
-            icon="i-lucide-clipboard-list"
-            variant="soft"
-            color="neutral"
             @click="mobileMenuOpen = false"
           >
+            <Icon
+              name="i-entypo:blackboard"
+              class="w-4 h-4"
+            />
             Schwarzes Brett
-          </UButton>
+          </NuxtLink>
         </nav>
       </div>
     </UContainer>

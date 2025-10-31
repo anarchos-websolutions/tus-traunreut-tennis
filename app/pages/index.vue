@@ -202,90 +202,76 @@
     </Section>
 
     <!-- Latest News Section -->
-    <section class="py-16 bg-white">
-      <UContainer>
-        <div class="text-center mb-12">
-          <h2
-            class="title-xl mb-4"
+    <Section
+      title="Aktuelle <span class='text-primary-500'>Neuigkeiten</span>"
+      description="Wir veranstalten über den Sommer diverse Tennisevents. Angefangen von Saisoneröffnungen im Mai, über Cups während der Saison, bis hin zum Sommerfest und Abschlussfeier."
+    >
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- News Item 1 -->
+        <article class="tennis-card p-6">
+          <h3
+            class="title mb-2"
             style="color: var(--tennis-green-dark)"
           >
-            Aktuelle <span style="color: var(--tennis-secondary)">Neuigkeiten</span>
-          </h2>
-          <div class="w-32 h-1 bg-gray-900 mx-auto" />
-        </div>
+            Plätze werden saniert und vorbereitet
+          </h3>
+          <p class="text-muted mb-4">
+            März 11, 2021
+          </p>
+          <p class="text-body">
+            Das Tennis-Spielen kann bald losgehen, mit dem herrichten der Plätze wird bald begonnen!
+            Spielen nur nach vorheriger Buchung!
+          </p>
+        </article>
 
-        <div class="grid md:grid-cols-2 gap-8">
-          <!-- News Item 1 -->
-          <article class="tennis-card p-6">
-            <h3
-              class="title mb-2"
-              style="color: var(--tennis-green-dark)"
-            >
-              Plätze werden saniert und vorbereitet
-            </h3>
-            <p class="text-muted mb-4">
-              März 11, 2021
-            </p>
-            <p class="text-body">
-              Das Tennis-Spielen kann bald losgehen, mit dem herrichten der Plätze wird bald begonnen!
-              Spielen nur nach vorheriger Buchung!
-            </p>
-          </article>
-
-          <!-- News Item 2 -->
-          <article class="tennis-card p-6">
-            <h3
-              class="title mb-2"
-              style="color: var(--tennis-green-dark)"
-            >
-              Information für Abospieler der Saison 2020/2021
-            </h3>
-            <p class="text-muted mb-4">
-              März 11, 2021
-            </p>
-            <p class="text-body">
-              Unsere Abokunden erhalten ihren Ausfall während der Corona Sperren erstattet.
-              Am Ende des ABOs werden alle Spieler benachrichtigt.
-              Weitere Infos und Kontaktaufnahme bitte unter info@tennishalle-traunreut.de
-            </p>
-          </article>
-        </div>
-
-        <div class="text-center mt-8">
-          <NuxtLink
-            to="/aktuelles"
-            class="btn-tennis-primary"
+        <!-- News Item 2 -->
+        <article class="tennis-card p-6">
+          <h3
+            class="title mb-2"
+            style="color: var(--tennis-green-dark)"
           >
-            Alle Neuigkeiten ansehen
-          </NuxtLink>
-        </div>
-      </UContainer>
-    </section>
+            Information für Abospieler der Saison 2020/2021
+          </h3>
+          <p class="text-muted mb-4">
+            März 11, 2021
+          </p>
+          <p class="text-body">
+            Unsere Abokunden erhalten ihren Ausfall während der Corona Sperren erstattet.
+            Am Ende des ABOs werden alle Spieler benachrichtigt.
+            Weitere Infos und Kontaktaufnahme bitte unter info@tennishalle-traunreut.de
+          </p>
+        </article>
+      </div>
+
+      <div class="text-center mt-8">
+        <NuxtLink
+          to="/aktuelles"
+          class="btn-tennis-primary"
+        >
+          Alle Neuigkeiten ansehen
+        </NuxtLink>
+      </div>
+    </Section>
 
     <!-- Newsletter Section -->
-    <section class="py-16 tennis-gradient text-white">
-      <UContainer>
-        <div class="text-center">
-          <h2 class="title-lg-dark mb-4">
-            SPIELEN SIE GERNE TENNIS?
-          </h2>
-          <p class="text-body-lg-dark mb-8">
-            Melden Sie sich für unseren Newsletter an und erhalten Sie die neuesten Tipps und Tricks,
-            um Ihr Spiel aufzupolieren, ebenso wie unsere Mitgliederrabatte und eine Liste der kommenden Turniere!
-          </p>
-          <div class="max-w-md mx-auto flex gap-4">
-            <input
-              type="email"
-              placeholder="Ihre E-Mail Adresse"
-              class="flex-1 px-4 py-3 rounded-lg text-white bg-white/20 hover:bg-white/30 border border-white/30"
-            >
-            <button class="btn px-6 py-3">
-              Anmelden
-            </button>
-          </div>
-        </div>
-      </UContainer>
-    </section>
+    <Section
+      title="SPIELEN SIE GERNE TENNIS?"
+      description="Melden Sie sich für unseren Newsletter an und erhalten Sie die neuesten Tipps und Tricks,
+      um Ihr Spiel aufzupolieren, ebenso wie unsere Mitgliederrabatte und eine Liste der kommenden Turniere!"
+      background-color="tennis-gradient"
+      text-color="text-white"
+    >
+      <div class="max-w-md mx-auto flex gap-4">
+        <input
+          type="email"
+          placeholder="Ihre E-Mail Adresse"
+          class="flex-1 px-4 py-3 rounded-lg text-white bg-white/20 hover:bg-white/30 border border-white/30"
+        >
+        <button class="btn px-6 py-3">
+          Anmelden
+        </button>
+      </div>
+    </Section>
   </div>
 </template>
 

@@ -45,7 +45,7 @@ install:
 # Start development server
 dev:
     @echo "Starting development server in Docker container..."
-    bun run dev
+    bun run dev --open
 
 # Build for production
 build:
