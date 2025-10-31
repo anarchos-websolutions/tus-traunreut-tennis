@@ -7,8 +7,7 @@
         v-slot="{ src, isLoaded, imgAttrs }"
         src="/images/tennisplatz.jpeg"
         alt="Tennis court background"
-        class="absolute inset-0 w-full h-full object-cover"
-        :style="{ zIndex: -1 }"
+        class="absolute inset-0 w-full h-full object-cover z-[-1]"
         loading="eager"
         preload
         format="webp"
@@ -41,7 +40,7 @@
       <UContainer class="relative py-20">
         <div class="text-center">
           <div class="flex items-center justify-center mb-6 space-x-2">
-            <h1 class="title-hero ">
+            <h1 class="text-2xl font-bold">
               TENNIS IM TUS TRAUNREUT
             </h1>
           </div>
@@ -135,82 +134,72 @@
     </section>
 
     <!-- More Than Tennis Section -->
-    <section class="py-16 bg-gray-50">
-      <UContainer>
-        <div class="text-center mb-12">
-          <h2
-            class="title-xl mb-4"
-            style="color: var(--tennis-green-dark)"
-          >
-            MEHR ALS NUR<br>
-            <span style="color: var(--tennis-secondary)">TENNIS SPIELEN</span>
-          </h2>
-          <div class="w-32 h-1 bg-gray-900 mx-auto" />
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-          <!-- Events -->
-          <div class="text-center">
-            <div class="tennis-card p-8">
-              <Icon
-                name="heroicons:sparkles"
-                class="w-16 h-16 mx-auto mb-4"
-                style="color: var(--tennis-secondary)"
-              />
-              <h3 class="title mb-4">
-                Termine & Events
-              </h3>
-              <p class="text-body">
-                Wir veranstalten über den Sommer diverse Tennisevents. Angefangen von Saisoneröffnungen im Mai,
-                über Cups während der Saison, bis hin zum Sommerfest und Abschlussfeier.
-              </p>
-            </div>
-          </div>
-
-          <!-- Training -->
-          <div class="text-center">
-            <div class="tennis-card p-8">
-              <Icon
-                name="heroicons:academic-cap"
-                class="w-16 h-16 mx-auto mb-4"
-                style="color: var(--tennis-green)"
-              />
-              <h3 class="title mb-4">
-                Trainingsangebote
-              </h3>
-              <p class="text-body mb-4">
-                Ihnen steht eine Vielzahl von verschiedenen Trainingsangeboten zur Auswahl:
-              </p>
-              <ul class="text-left text-body space-y-1">
-                <li>• Jugendtraining in verschiedenen Leistungsgruppen</li>
-                <li>• Individualtraining in Form von Einzelstunden</li>
-                <li>• Matchtraining</li>
-                <li>• Konditionstraining</li>
-                <li>• mehr . . .</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Facilities -->
-          <div class="text-center">
-            <div class="tennis-card p-8">
-              <Icon
-                name="heroicons:building-office-2"
-                class="w-16 h-16 mx-auto mb-4"
-                style="color: var(--tennis-secondary)"
-              />
-              <h3 class="title mb-4">
-                Unsere schöne Anlage
-              </h3>
-              <p class="text-body">
-                Unsere Anlage bietet zwei Outdoor Tennisplätze sowie eine Tennishalle,
-                mit drei Spielfeldern, zur Nutzung.
-              </p>
-            </div>
+    <Section
+      title="MEHR ALS NUR<br><span class='text-primary-500'>TENNIS SPIELEN</span>"
+      description="Wir veranstalten über den Sommer diverse Tennisevents. Angefangen von Saisoneröffnungen im Mai, über Cups während der Saison, bis hin zum Sommerfest und Abschlussfeier."
+    >
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Events -->
+        <div class="text-center">
+          <div class="tennis-card p-8">
+            <Icon
+              name="heroicons:sparkles"
+              class="w-16 h-16 mx-auto mb-4"
+              style="color: var(--tennis-secondary)"
+            />
+            <h3 class="title mb-4">
+              Termine & Events
+            </h3>
+            <p class="text-body">
+              Wir veranstalten über den Sommer diverse Tennisevents. Angefangen von Saisoneröffnungen im Mai,
+              über Cups während der Saison, bis hin zum Sommerfest und Abschlussfeier.
+            </p>
           </div>
         </div>
-      </UContainer>
-    </section>
+
+        <!-- Training -->
+        <div class="text-center">
+          <div class="tennis-card p-8">
+            <Icon
+              name="heroicons:academic-cap"
+              class="w-16 h-16 mx-auto mb-4"
+              style="color: var(--tennis-green)"
+            />
+            <h3 class="title mb-4">
+              Trainingsangebote
+            </h3>
+            <p class="text-body mb-4">
+              Ihnen steht eine Vielzahl von verschiedenen Trainingsangeboten zur Auswahl:
+            </p>
+            <ul class="text-left text-body space-y-1">
+              <li>• Jugendtraining in verschiedenen Leistungsgruppen</li>
+              <li>• Individualtraining in Form von Einzelstunden</li>
+              <li>• Matchtraining</li>
+              <li>• Konditionstraining</li>
+              <li>• mehr . . .</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Facilities -->
+        <div class="text-center">
+          <div class="tennis-card p-8">
+            <Icon
+              name="heroicons:building-office-2"
+              class="w-16 h-16 mx-auto mb-4"
+              style="color: var(--tennis-secondary)"
+            />
+            <h3 class="title mb-4">
+              Unsere schöne Anlage
+            </h3>
+            <p class="text-body">
+              Unsere Anlage bietet zwei Outdoor Tennisplätze sowie eine Tennishalle,
+              mit drei Spielfeldern, zur Nutzung.
+            </p>
+          </div>
+        </div>
+      </div>
+    </Section>
 
     <!-- Latest News Section -->
     <section class="py-16 bg-white">
