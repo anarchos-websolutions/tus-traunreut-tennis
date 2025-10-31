@@ -6,7 +6,7 @@
     />
 
     <!-- Leadership Team -->
-    <section class="py-16 bg-white">
+    <section class="py-16">
       <UContainer>
         <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           <!-- Team Member 1 -->
@@ -63,63 +63,59 @@
     </section>
 
     <!-- Department Info -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-16">
       <UContainer>
-        <div class="max-w-4xl mx-auto">
-          <div class="tennis-card p-8">
-            <h2
-              class="text-3xl font-bold mb-6 text-center"
-              style="color: var(--tennis-green-dark)"
+        <div class="p-8">
+          <h2
+            class="heading-xl mb-6 text-center"
+          >
+            Neue Führung - Neue Perspektiven
+          </h2>
+
+          <div class="prose prose-lg mx-auto text-gray-600">
+            <p class="mb-6">
+              Nach zwölf Jahren hat <strong>Christel Hofmann</strong> die Leitung der Tennisabteilung des TuS Traunreut abgegeben.
+              Ihr Nachfolger ist <strong>Markus Petzka</strong>, der zusammen mit <strong>Tino Trefil</strong> und
+              <strong>Markus Luprich</strong> jetzt ein Dreigespann an der Abteilungsspitze bildet.
+            </p>
+
+            <p class="mb-6">
+              Um die Zukunftsfähigkeit des Tennissports zu stärken und zu sichern, hat man sich auch darauf verständigt,
+              die Abteilung und die Tennishalle unter einem Dach zusammenzuführen.
+            </p>
+
+            <p class="mb-6">
+              Durch die Einführung eines <strong>Online-Buchungssystems</strong>, das eine nahtlose und benutzerfreundliche
+              Buchung mit dem Smartphone oder einem Computer ermöglicht, verspricht sich die neue Abteilungsleitung auch
+              eine bessere Auslastung der Tennishalle.
+            </p>
+          </div>
+
+          <div class="text-center mt-8">
+            <NuxtLink
+              to="/booking"
+              class="btn-tennis-secondary"
             >
-              Neue Führung - Neue Perspektiven
-            </h2>
-
-            <div class="prose prose-lg mx-auto text-gray-600">
-              <p class="mb-6">
-                Nach zwölf Jahren hat <strong>Christel Hofmann</strong> die Leitung der Tennisabteilung des TuS Traunreut abgegeben.
-                Ihr Nachfolger ist <strong>Markus Petzka</strong>, der zusammen mit <strong>Tino Trefil</strong> und
-                <strong>Markus Luprich</strong> jetzt ein Dreigespann an der Abteilungsspitze bildet.
-              </p>
-
-              <p class="mb-6">
-                Um die Zukunftsfähigkeit des Tennissports zu stärken und zu sichern, hat man sich auch darauf verständigt,
-                die Abteilung und die Tennishalle unter einem Dach zusammenzuführen.
-              </p>
-
-              <p class="mb-6">
-                Durch die Einführung eines <strong>Online-Buchungssystems</strong>, das eine nahtlose und benutzerfreundliche
-                Buchung mit dem Smartphone oder einem Computer ermöglicht, verspricht sich die neue Abteilungsleitung auch
-                eine bessere Auslastung der Tennishalle.
-              </p>
-            </div>
-
-            <div class="text-center mt-8">
-              <NuxtLink
-                to="/booking"
-                class="btn-tennis-secondary"
-              >
-                Online-Buchungssystem nutzen
-              </NuxtLink>
-            </div>
+              Online-Buchungssystem nutzen
+            </NuxtLink>
           </div>
         </div>
       </UContainer>
     </section>
 
     <!-- Contact Section -->
-    <section class="py-16 bg-white">
+    <section class="py-16">
       <UContainer>
         <div class="text-center mb-12">
           <h2
             class="heading-xl mb-4"
-            style="color: var(--color-primary-600)"
           >
-            Kontakt zur <span style="color: var(--color-secondary-900)">Abteilungsleitung</span>
+            Kontakt zur Abteilungsleitung
           </h2>
-          <div class="w-32 h-1 bg-[var(--color-secondary-900)] mx-auto" />
+          <div class="w-32 h-1 bg-secondary-900 mx-auto" />
         </div>
 
-        <div class="max-w-2xl mx-auto tennis-card p-8">
+        <div class="tennis-card p-8">
           <div class="grid md:grid-cols-2 gap-8">
             <div>
               <h3

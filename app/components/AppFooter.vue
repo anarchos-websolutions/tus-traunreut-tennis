@@ -27,37 +27,26 @@
             <div class="flex space-x-3">
               <UButton
                 variant="ghost"
-                color="gray"
                 size="sm"
+                class="text-white"
                 square
-              >
-                <Icon
-                  name="simple-icons:facebook"
-                  class="w-4 h-4"
-                />
-              </UButton>
+                icon="simple-icons:facebook"
+              />
               <UButton
                 variant="ghost"
-                color="gray"
+                class="text-white"
                 size="sm"
                 square
-              >
-                <Icon
-                  name="simple-icons:instagram"
-                  class="w-4 h-4"
-                />
-              </UButton>
+                icon="simple-icons:instagram"
+              />
+
               <UButton
                 variant="ghost"
-                color="gray"
+                class="text-white"
                 size="sm"
                 square
-              >
-                <Icon
-                  name="heroicons:envelope"
-                  class="w-4 h-4"
-                />
-              </UButton>
+                icon="heroicons:envelope"
+              />
             </div>
           </div>
 

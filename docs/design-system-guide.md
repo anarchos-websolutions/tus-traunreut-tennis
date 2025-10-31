@@ -6,14 +6,67 @@
 
 This design system provides a complete set of design tokens, components, and guidelines for building consistent, professional interfaces for the tennis club website. It's built on a foundation of **Professional Green** and **Sophisticated Gray** colors, creating a modern and trustworthy brand experience.
 
+**Built with Tailwind CSS v4** - This design system uses Tailwind v4's `@theme` directive, making all tokens available as utility classes (e.g., `bg-primary-500`, `text-secondary-900`) as well as CSS variables.
+
 ## Table of Contents
 
-1. [Color System](#color-system)
-2. [Typography Scale](#typography-scale)
-3. [Spacing System](#spacing-system)
-4. [Component Library](#component-library)
-5. [Usage Guidelines](#usage-guidelines)
-6. [Examples](#examples)
+1. [Tailwind v4 Theme System](#tailwind-v4-theme-system)
+2. [Color System](#color-system)
+3. [Typography Scale](#typography-scale)
+4. [Spacing System](#spacing-system)
+5. [Component Library](#component-library)
+6. [Usage Guidelines](#usage-guidelines)
+7. [Examples](#examples)
+
+---
+
+## Tailwind v4 Theme System
+
+### How It Works
+
+This design system uses **Tailwind CSS v4's `@theme` directive** to define design tokens. All tokens defined in `@theme` are automatically available as:
+
+1. **Tailwind Utility Classes** - Use tokens directly in HTML (e.g., `bg-primary-500`, `text-secondary-900`, `p-lg`, `rounded-xl`)
+2. **CSS Variables** - Reference tokens in custom CSS or inline styles (e.g., `var(--color-primary-500)`, `var(--spacing-lg)`)
+
+### Token Categories
+
+The design system is organized into logical token categories:
+
+| Category | Namespace | Example Utilities | Example CSS Variable |
+|----------|-----------|-------------------|----------------------|
+| **Colors** | `--color-*` | `bg-primary-500`, `text-secondary-900` | `var(--color-primary-500)` |
+| **Spacing** | `--spacing-*` | `p-lg`, `m-sm`, `gap-md` | `var(--spacing-lg)` |
+| **Radius** | `--radius-*` | `rounded-lg`, `rounded-xl` | `var(--radius-lg)` |
+| **Shadows** | `--shadow-*` | `shadow-md`, `shadow-lg` | `var(--shadow-md)` |
+| **Fonts** | `--font-*` | `font-sans` | `var(--font-sans)` |
+
+### Quick Start Examples
+
+```html
+<!-- Using Tailwind utility classes (Recommended) -->
+<div class="bg-primary-500 text-white p-lg rounded-xl shadow-md">
+  Content with brand colors
+</div>
+
+<!-- Using CSS variables for custom styling -->
+<div style="background: var(--color-primary-500); padding: var(--spacing-lg);">
+  Custom styled content
+</div>
+
+<!-- Combining both approaches -->
+<div class="rounded-xl" style="box-shadow: var(--shadow-lg);">
+  Mixed approach
+</div>
+```
+
+### File Structure
+
+Design tokens are defined in `app/assets/css/main.css`:
+
+- **`@theme` block** - Core design tokens (colors, spacing, shadows, etc.)
+- **`:root` block** - Semantic aliases and component-level variables
+- **Component classes** - Reusable component styles using theme tokens
 
 ---
 
@@ -86,14 +139,54 @@ The secondary gray provides neutral balance and professional sophistication.
 
 ### Usage Examples
 
+#### Tailwind Utility Classes (Recommended)
+
+All color tokens are available as Tailwind utility classes:
+
 ```html
-<!-- Primary brand color -->
-<div class="bg-[var(--color-primary-500)] text-white">Brand element</div>
+<!-- Primary brand color using utility classes -->
+<div class="bg-primary-500 text-white">Brand element</div>
+<div class="bg-primary-600 hover:bg-primary-700">Interactive element</div>
 
 <!-- Secondary color -->
-<div class="bg-[var(--color-secondary-900)] text-white">Secondary element</div>
+<div class="bg-secondary-900 text-white">Secondary element</div>
 
-<!-- Text colors -->
+<!-- Semantic colors -->
+<div class="bg-success text-white">Success message</div>
+<div class="bg-warning text-black">Warning message</div>
+<div class="bg-error text-white">Error message</div>
+<div class="bg-info text-white">Info message</div>
+
+<!-- Text colors using utility classes -->
+<h1 class="text-secondary-900">Primary heading</h1>
+<p class="text-secondary-600">Secondary text</p>
+<small class="text-secondary-500">Muted information</small>
+```
+
+#### CSS Variables (For Custom Styles)
+
+You can also use CSS variables in custom CSS or inline styles:
+
+```html
+<!-- Using CSS variables in inline styles -->
+<div style="background-color: var(--color-primary-500); color: white;">
+  Brand element
+</div>
+
+<!-- Using CSS variables in custom CSS -->
+<style>
+  .custom-component {
+    background-color: var(--color-primary-500);
+    border-color: var(--color-border-focus);
+  }
+</style>
+```
+
+#### Component Utility Classes
+
+Semantic text color utilities are also available:
+
+```html
 <h1 class="text-primary">Primary heading</h1>
 <p class="text-secondary">Secondary text</p>
 <small class="text-muted">Muted information</small>
@@ -176,10 +269,16 @@ All typography classes have `-dark` variants for use on colored backgrounds:
 
 ```html
 <!-- On dark/colored backgrounds -->
-<div class="bg-[var(--color-primary-500)] p-8">
+<div class="bg-primary-500 p-8">
   <h2 class="display-lg-dark">Title on Dark Background</h2>
   <p class="body-lg-dark">Body text that maintains readability</p>
   <span class="caption-lg-dark">Caption text for dark backgrounds</span>
+</div>
+
+<!-- Or using Tailwind utilities directly -->
+<div class="bg-primary-600 text-white p-8">
+  <h2 class="display-lg-dark">Title on Dark Background</h2>
+  <p class="body-lg-dark">Body text that maintains readability</p>
 </div>
 ```
 
@@ -189,21 +288,24 @@ All typography classes have `-dark` variants for use on colored backgrounds:
 
 ### Spacing Scale
 
-Consistent spacing tokens for layouts and components.
+Consistent spacing tokens for layouts and components. All spacing tokens are available as Tailwind utility classes using the `--spacing-*` namespace.
+
+**Theme Tokens (Available as Tailwind utilities):**
 
 ```css
---space-xs: 0.25rem     /* 4px */
---space-sm: 0.5rem      /* 8px */
---space-md: 0.75rem     /* 12px */
---space-lg: 1rem        /* 16px */
---space-xl: 1.25rem     /* 20px */
---space-2xl: 1.5rem     /* 24px */
---space-3xl: 2rem       /* 32px */
---space-4xl: 2.5rem     /* 40px */
---space-5xl: 3rem       /* 48px */
---space-6xl: 4rem       /* 64px */
---space-7xl: 5rem       /* 80px */
---space-8xl: 6rem       /* 96px */
+/* Defined in @theme directive */
+--spacing-xs: 0.25rem     /* 4px - use: p-xs, m-xs, gap-xs */
+--spacing-sm: 0.5rem      /* 8px - use: p-sm, m-sm, gap-sm */
+--spacing-md: 0.75rem     /* 12px - use: p-md, m-md, gap-md */
+--spacing-lg: 1rem        /* 16px - use: p-lg, m-lg, gap-lg */
+--spacing-xl: 1.25rem     /* 20px - use: p-xl, m-xl, gap-xl */
+--spacing-2xl: 1.5rem     /* 24px - use: p-2xl, m-2xl, gap-2xl */
+--spacing-3xl: 2rem       /* 32px - use: p-3xl, m-3xl, gap-3xl */
+--spacing-4xl: 2.5rem     /* 40px - use: p-4xl, m-4xl, gap-4xl */
+--spacing-5xl: 3rem       /* 48px - use: p-5xl, m-5xl, gap-5xl */
+--spacing-6xl: 4rem       /* 64px - use: p-6xl, m-6xl, gap-6xl */
+--spacing-7xl: 5rem       /* 80px - use: p-7xl, m-7xl, gap-7xl */
+--spacing-8xl: 6rem       /* 96px - use: p-8xl, m-8xl, gap-8xl */
 ```
 
 ### Component Spacing
@@ -228,16 +330,29 @@ Consistent spacing tokens for layouts and components.
 
 ### Usage Examples
 
+#### Tailwind Utility Classes (Recommended)
+
 ```html
-<!-- Component spacing -->
+<!-- Spacing utilities (p = padding, m = margin, gap = gap) -->
+<div class="p-xs md:p-lg lg:p-2xl">Responsive padding</div>
+<div class="m-sm">Small margin</div>
+<div class="gap-md">Gap between items</div>
+
+<!-- Component spacing using semantic variables -->
 <div class="p-[var(--space-component-md)]">Card content</div>
 
-<!-- Layout spacing -->
+<!-- Layout spacing using semantic variables -->
 <section class="py-[var(--space-layout-md)]">Section content</section>
-
-<!-- Custom spacing with CSS variables -->
-<div style="margin-bottom: var(--space-3xl)">Custom spaced element</div>
 ```
+
+#### CSS Variables (For Custom Styles)
+
+```html
+<!-- Custom spacing with CSS variables -->
+<div style="margin-bottom: var(--spacing-3xl)">Custom spaced element</div>
+```
+
+**Note:** The spacing scale uses the `--spacing-*` namespace in the `@theme` directive, making all values available as Tailwind utilities. Semantic spacing tokens (like `--space-component-*` and `--space-layout-*`) are defined in `:root` for component-level usage.
 
 ---
 

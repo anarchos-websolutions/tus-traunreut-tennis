@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [// '@nuxt/scripts',
-  '@nuxt/ui', '@nuxt/content', '@nuxt/icon', '@nuxt/eslint', '@nuxt/image', 'nuxt-swiper'],
+  modules: [
+    '@nuxt/ui', '@nuxt/icon', '@nuxt/eslint', '@nuxt/image', 'nuxt-swiper'],
 
   // Static Site Generation preset
   ssr: true,

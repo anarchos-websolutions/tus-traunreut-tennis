@@ -32,9 +32,9 @@
     "[jsonc]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
-    "files.associations": {
+    /* "files.associations": {
         "*.css": "tailwindcss"
-    },
+    }, */
     "editor.quickSuggestions": {
         "strings": "on"
     },

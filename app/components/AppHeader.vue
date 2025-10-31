@@ -11,13 +11,9 @@
           <NuxtImg src="/images/logo.png" />
           <div>
             <h1
-              class="text-xl font-bold"
+              class="heading-lg"
               style="color: var(--tennis-green-dark)"
             >TUS Traunreut</h1>
-            <p
-              class="text-xs"
-              style="color: var(--tennis-secondary)"
-            >Tennis</p>
           </div>
         </NuxtLink>
 
