@@ -54,6 +54,13 @@ services:
       - OLLAMA_LOG_LEVEL=debug
     volumes:
       - ollama_data:/root/.ollama
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        ollama serve &
+        sleep 5
+        ollama pull qwen3:4b || true
+        wait
     restart: on-failure:0
 
 volumes:

@@ -30,6 +30,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     // Private keys (only available on server-side)
     cloudflareWorkersSecret: process.env.CLOUDFLARE_WORKERS_SECRET,
+    adminPassword: 'admin',
 
     // Public keys (exposed to client-side)
     public: {
@@ -46,27 +47,6 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: 'bun',
-  },
-
-  // Vite configuration optimized for Docker development with HMR
-  // Note: host/port are set via --host 0.0.0.0 in docker-compose command
-  vite: {
-    server: {
-      // Watch configuration - polling is REQUIRED for Docker volume mounts
-      watch: {
-        usePolling: true, // Critical for Docker - enables file watching via polling
-        interval: 1000, // Polling interval in milliseconds
-      },
-      // HMR WebSocket configuration for Docker
-      // Use 127.0.0.1 instead of localhost to avoid IPv6 issues in Docker/WSL2
-      // Server binds to 0.0.0.0 inside container (via --host 0.0.0.0 flag)
-      // Browser connects to 127.0.0.1:3000 from host machine
-      hmr: {
-        protocol: 'ws',
-        host: '127.0.0.1', // Use IPv4 explicitly to avoid IPv6 connection issues
-        clientPort: 3000, // Browser uses port 3000 (mapped in docker-compose)
-      },
-    },
   },
 
   eslint: {

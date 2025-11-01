@@ -50,5 +50,9 @@
         "vue"
     ],
     "eslint.format.enable": true,
-    "eslint.lintTask.enable": true
+    "eslint.lintTask.enable": true,
+    // prioritize ArkType's "type" for autoimports
+    "typescript.preferences.autoImportSpecifierExcludeRegexes": [
+        "^(node:)?os$"
+    ],
 }
