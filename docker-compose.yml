@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  application:
+    build:
+      context: .
+      dockerfile: config/docker/development/Dockerfile
+    container_name: tus-traunreut-tennis-dev
+    ports:
+      - "3000:3000"
+      - "24678:24678"
+    volumes:
+      # Mount source code for hot reload during development
+      - .:/app
+      # Exclude node_modules to use container's dependencies
+      - /app/node_modules
+      # Exclude .nuxt build directory to use container's build
+      - /app/.nuxt
+      # Exclude dist directory
+      - /app/dist
+    working_dir: /app
+    environment:
+      - NODE_ENV=development
+      - TZ=Europe/Berlin
+      # Enable polling for file watching in Docker (critical for HMR on WSL2/Docker)
+      - CHOKIDAR_USEPOLLING=true
+      - CHOKIDAR_INTERVAL=1000
+      - WATCHPACK_POLLING=true
+      - VITE_HMR_PORT=24678
+    command: bun run dev --host 0.0.0.0
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+

@@ -43,13 +43,9 @@ export default defineNuxtConfig({
     viewTransition: true,
   },
   compatibilityDate: '2025-07-15',
+
   nitro: {
-    prerender: {
-      routes: ['/'],
-    },
-    compressPublicAssets: {
-      brotli: true,
-    },
+    preset: 'bun',
   },
 
   eslint: {
