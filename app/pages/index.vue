@@ -254,24 +254,11 @@
     </Section>
 
     <!-- Newsletter Section -->
-    <Section
+    <Newsletter
       title="SPIELEN SIE GERNE TENNIS?"
       description="Melden Sie sich für unseren Newsletter an und erhalten Sie die neuesten Tipps und Tricks,
       um Ihr Spiel aufzupolieren, ebenso wie unsere Mitgliederrabatte und eine Liste der kommenden Turniere!"
-      background-color="tennis-gradient"
-      text-color="text-white"
-    >
-      <div class="max-w-md mx-auto flex gap-4">
-        <input
-          type="email"
-          placeholder="Ihre E-Mail Adresse"
-          class="flex-1 px-4 py-3 rounded-lg text-white bg-white/20 hover:bg-white/30 border border-white/30"
-        >
-        <button class="btn px-6 py-3">
-          Anmelden
-        </button>
-      </div>
-    </Section>
+    />
   </div>
 </template>
 

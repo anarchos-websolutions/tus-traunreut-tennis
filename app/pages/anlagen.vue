@@ -16,12 +16,10 @@
           <div class="flex items-center mb-6">
             <Icon
               name="heroicons:sun"
-              class="w-12 h-12 mr-4"
-              style="color: var(--color-secondary-900)"
+              class="w-12 h-12 mr-4 text-secondary-900"
             />
             <h3
               class="text-2xl font-bold"
-              style="color: var(--tennis-green-dark)"
             >
               Sand-Tennisplätze
             </h3>
@@ -95,12 +93,10 @@
           <div class="flex items-center mb-6">
             <Icon
               name="heroicons:building-office-2"
-              class="w-12 h-12 mr-4"
-              style="color: var(--tennis-green)"
+              class="w-12 h-12 mr-4 text-secondary-900"
             />
             <h3
               class="text-2xl font-bold"
-              style="color: var(--tennis-green-dark)"
             >
               Tennishalle
             </h3>
@@ -179,17 +175,17 @@
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Court Specifications -->
         <div class="tennis-card p-6">
-          <Icon
-            name="heroicons:rectangle-stack"
-            class="w-12 h-12 mx-auto mb-4"
-            style="color: var(--color-secondary-900)"
-          />
-          <h3
-            class="text-xl font-semibold mb-4 text-center"
-            style="color: var(--tennis-green-dark)"
-          >
-            Platzspezifikationen
-          </h3>
+          <div class="flex items-center mb-6">
+            <Icon
+              name="heroicons:rectangle-stack"
+              class="w-12 h-12 mr-4 text-secondary-900"
+            />
+            <h3
+              class="text-2xl font-bold"
+            >
+              Platzspezifikationen
+            </h3>
+          </div>
           <ul class="space-y-2 text-gray-600 text-sm">
             <li class="flex justify-between">
               <span>Platzgröße:</span>
@@ -216,17 +212,17 @@
 
         <!-- Equipment -->
         <div class="tennis-card p-6">
-          <Icon
-            name="heroicons:wrench-screwdriver"
-            class="w-12 h-12 mx-auto mb-4"
-            style="color: var(--tennis-green)"
-          />
-          <h3
-            class="text-xl font-semibold mb-4 text-center"
-            style="color: var(--tennis-green-dark)"
-          >
-            Ausstattung
-          </h3>
+          <div class="flex items-center mb-6">
+            <Icon
+              name="heroicons:wrench-screwdriver"
+              class="w-12 h-12 mr-4 text-secondary-900"
+            />
+            <h3
+              class="text-2xl font-bold"
+            >
+              Ausstattung
+            </h3>
+          </div>
           <ul class="space-y-2 text-gray-600 text-sm">
             <li class="flex items-center">
               <Icon
@@ -268,17 +264,17 @@
 
         <!-- Services -->
         <div class="tennis-card p-6">
-          <Icon
-            name="heroicons:cog-6-tooth"
-            class="w-12 h-12 mx-auto mb-4"
-            style="color: var(--color-secondary-900)"
-          />
-          <h3
-            class="text-xl font-semibold mb-4 text-center"
-            style="color: var(--tennis-green-dark)"
-          >
-            Services
-          </h3>
+          <div class="flex items-center mb-6">
+            <Icon
+              name="heroicons:cog-6-tooth"
+              class="w-12 h-12 mr-4 text-secondary-900"
+            />
+            <h3
+              class="text-2xl font-bold"
+            >
+              Services
+            </h3>
+          </div>
           <ul class="space-y-2 text-gray-600 text-sm">
             <li class="flex items-center">
               <Icon
@@ -417,8 +413,7 @@
     <Section
       title="Platz reservieren"
       description="Buchen Sie Ihren Tennisplatz schnell und einfach online oder telefonisch"
-      background-color="tennis-gradient"
-      text-color="text-white"
+      class="tennis-gradient text-white"
     >
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <NuxtLink

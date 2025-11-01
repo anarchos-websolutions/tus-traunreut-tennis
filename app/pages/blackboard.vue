@@ -2,7 +2,7 @@
   <div class="min-h-screen">
     <PageHeader
       title="Schwarzes Brett"
-      description="Teile Mitteilungen an ausgewählte Empfänger inklusive Bild."
+      description="Teile Mitteilungen, Anregungen und Ideen mit uns."
     />
     <UContainer class="py-10">
       <UCard>

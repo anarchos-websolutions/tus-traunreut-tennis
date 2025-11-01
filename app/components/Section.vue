@@ -1,7 +1,7 @@
 <template>
   <section
     class="py-16"
-    :class="[props.backgroundColor, props.textColor]"
+    :class="props.class"
   >
     <UContainer>
       <div class="text-center mb-12">
@@ -10,7 +10,7 @@
           v-html="title"
         />
         <p class="text-lg">
-          {{ description }}
+          <span v-html="description" />
         </p>
       </div>
       <slot />
@@ -28,15 +28,10 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  backgroundColor: {
+  class: {
     type: String,
     required: false,
-    default: 'bg-white',
-  },
-  textColor: {
-    type: String,
-    required: false,
-    default: 'text-gray-600',
+    default: 'bg-white text-gray-600',
   },
 });
 </script>

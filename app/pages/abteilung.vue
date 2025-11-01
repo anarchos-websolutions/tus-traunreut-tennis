@@ -66,14 +66,7 @@
     <Section
       title="Neue Führung - <span class='text-primary-500'>Neue Perspektiven</span>"
       description="Seit dem 10. Oktober 2025 ist die neue Abteilungsleitung im Amt. Mit frischem Wind für den Tennis-Sport und neuen Perspektiven für die Zukunft stellt sich die neue Abteilungsleitung, bestehend aus <strong>Markus Petzka</strong> und <strong>Patrick Laufke</strong>, den Herausforderungen."
-    >
-      <div class="prose prose-lg mx-auto text-gray-600">
-        <p class="mb-6">
-          Seit dem 10. Oktober 2025 ist die neue Abteilungsleitung im Amt.
-          Mit frischem Wind für den Tennis-Sport und neuen Perspektiven für die Zukunft stellt sich die neue Abteilungsleitung, bestehend aus <strong>Markus Petzka</strong> und <strong>Patrick Laufke</strong>, den Herausforderungen.
-        </p>
-      </div>
-    </Section>
+    />
   </div>
 </template>
 

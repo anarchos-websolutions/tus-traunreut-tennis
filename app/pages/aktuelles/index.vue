@@ -159,7 +159,7 @@
     </section>
 
     <!-- Upcoming Events -->
-    <section class="py-16 bg-gray-50">
+    <!--  <section class="py-16 bg-gray-50">
       <UContainer>
         <div class="text-center mb-12">
           <h2
@@ -206,10 +206,10 @@
           </div>
         </div>
       </UContainer>
-    </section>
+    </section> -->
 
     <!-- News Categories -->
-    <section class="py-16 bg-white">
+    <!--  <section class="py-16 bg-white">
       <UContainer>
         <div class="text-center mb-12">
           <h2
@@ -222,7 +222,6 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Berichte -->
           <NuxtLink
             to="/aktuelles/berichte"
             class="tennis-card p-6 text-center"
@@ -244,7 +243,6 @@
             <span class="text-orange-600 text-sm font-medium">{{ reports.length }} Artikel</span>
           </NuxtLink>
 
-          <!-- Termine -->
           <div class="tennis-card p-6 text-center">
             <Icon
               name="heroicons:calendar-days"
@@ -263,7 +261,6 @@
             <span class="text-orange-600 text-sm font-medium">0 Termine</span>
           </div>
 
-          <!-- Vereinsnews -->
           <div class="tennis-card p-6 text-center">
             <Icon
               name="heroicons:megaphone"
@@ -282,7 +279,6 @@
             <span class="text-orange-600 text-sm font-medium">2 Artikel</span>
           </div>
 
-          <!-- Erfolge -->
           <div class="tennis-card p-6 text-center">
             <Icon
               name="heroicons:trophy"
@@ -302,9 +298,12 @@
           </div>
         </div>
       </UContainer>
-    </section>
+    </section> -->
 
-    <Newsletter />
+    <Newsletter
+      title="BLEIBEN SIE INFORMIERT"
+      description="Melden Sie sich für unseren Newsletter an und erhalten Sie die neuesten Neuigkeiten und Aktivitäten der TUS Traunreut Tennisabteilung."
+    />
   </div>
 </template>
 
@@ -320,24 +319,24 @@ useSeoMeta({
 });
 
 // Fetch all content files from the content directory
-const { data: allContent } = await useAsyncData('all-content', () =>
+/* const { data: allContent } = await useAsyncData('all-content', () =>
   queryCollection('content').all(),
 );
 
 const { data: reports } = await useAsyncData('reports', () =>
   queryCollection('content').where('path', 'LIKE', '/reports/%').all(),
-);
+); */
 
 // Fetch blog articles specifically
 /* const { data: blogArticles } = await useAsyncData('blog-articles', () =>
   queryCollection('content').where('path', 'LIKE', '/blog/%').all(),
 ); */
 
-watch(allContent, () => {
+/* watch(allContent, () => {
   logger.debug('all content files', allContent.value);
 }, { immediate: true });
 
 watch(reports, () => {
   logger.debug('reports', reports.value);
-}, { immediate: true });
+}, { immediate: true }); */
 </script>
