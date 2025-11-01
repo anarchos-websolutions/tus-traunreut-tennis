@@ -24,3 +24,38 @@ services:
       - TZ=Europe/Berlin
     ports:
       - "3000:3000"
+    
+  weaviate:
+    command:
+      - --host
+      - 0.0.0.0
+      - --port
+      - '8080'
+      - --scheme
+      - http
+    image: cr.weaviate.io/semitechnologies/weaviate:1.33.3
+    ports:
+      - 8080:8080
+      - 50051:50051
+    volumes:
+      - weaviate_data:/var/lib/weaviate
+    restart: on-failure:0
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+      CLUSTER_HOSTNAME: 'node1'
+
+  ollama:
+    image: ollama/ollama
+    ports:
+      - 11434:11434
+    environment:
+      - OLLAMA_LOG_LEVEL=debug
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: on-failure:0
+
+volumes:
+  weaviate_data:
+  ollama_data:
