@@ -113,7 +113,10 @@ export async function createWeaviateClient() {
 export async function createCollection(client: WeaviateClient, collectionName: string) {
   const collection = await client.collections.create({
     name: collectionName,
-    vectorizers: vectors.text2VecWeaviate(),
+    vectorizers: vectors.text2VecOllama({
+      apiEndpoint: 'http://host.docker.internal:11434',
+      model: 'nomic-embed-text',
+    }),
   });
   return collection;
 }

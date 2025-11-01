@@ -48,7 +48,6 @@ export default defineNuxtConfig({
 
   // Performance optimizations
   experimental: {
-    payloadExtraction: false,
     viewTransition: true,
   },
   compatibilityDate: '2025-07-15',
