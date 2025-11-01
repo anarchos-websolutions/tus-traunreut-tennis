@@ -2,7 +2,7 @@
 # Runs bun commands in a Bun Docker environment
 
 # Docker configuration
-DOCKER_IMAGE := "tus-traunreut-tennis-dev"
+DOCKER_IMAGE := "tus-traunreut-tennis-application"
 DOCKER_VOLUME := "$PWD:/app"
 DOCKER_WORKDIR := "/app"
 
