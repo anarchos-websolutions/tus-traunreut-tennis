@@ -31,6 +31,14 @@ export default defineNuxtConfig({
     // Private keys (only available on server-side)
     cloudflareWorkersSecret: process.env.CLOUDFLARE_WORKERS_SECRET,
     adminPassword: 'admin',
+    weaviateApiKey: process.env.WEAVIATE_API_KEY,
+    weaviateUrl: process.env.WEAVIATE_URL,
+    weaviateHost: process.env.WEAVIATE_HOST,
+    weaviatePort: process.env.WEAVIATE_PORT,
+    weaviateUser: process.env.WEAVIATE_USER,
+    weaviatePassword: process.env.WEAVIATE_PASSWORD,
+    weaviateDatabase: process.env.WEAVIATE_DATABASE,
+    weaviateCollection: process.env.WEAVIATE_COLLECTION,
 
     // Public keys (exposed to client-side)
     public: {

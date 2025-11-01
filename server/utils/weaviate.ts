@@ -1,78 +1,76 @@
-// Default to 'weaviate' hostname for Docker, fallback to localhost for local dev
-const WEAVIATE_HOST = process.env.WEAVIATE_HOST || (process.env.NODE_ENV === 'production' ? 'weaviate' : 'localhost');
-const WEAVIATE_URL = process.env.WEAVIATE_URL || `http://${WEAVIATE_HOST}:8080`;
+import type { WeaviateClient } from 'weaviate-client';
+import weaviate, { vectors } from 'weaviate-client';
 
-interface WeaviateChunk {
-  content: string;
-  source: string;
-  chunkIndex: number;
-}
+// Default to 'weaviate' hostname for Docker, fallback to localhost for local dev
+const WEAVIATE_HOST = useRuntimeConfig().weaviateHost as string || (process.env.NODE_ENV === 'production' ? 'weaviate' : 'localhost');
+const WEAVIATE_URL = useRuntimeConfig().weaviateUrl as string || `http://${WEAVIATE_HOST}:8080`;
+const weaviateApiKey = useRuntimeConfig().weaviateApiKey as string;
 
 export async function processPDFAndAddToWeaviate(
   pdfBuffer: Buffer,
   filename: string,
 ): Promise<{ chunksAdded: number }> {
-  // Extract text from PDF
-  const text = await extractPDFText(pdfBuffer);
-
-  // Chunk the text
-  const chunks = chunkText(text, {
-    chunkSize: 1000,
-    chunkOverlap: 200,
-  });
-
-  // Initialize Weaviate client
   const client = await createWeaviateClient();
+  const collectionName = 'Documents';
 
-  // Ensure collection exists
-  await ensureCollectionExists(client, 'Documents');
+  try {
+  // Extract text from PDF
+    const text = await extractPDFText(pdfBuffer);
 
-  // Add chunks to Weaviate
-  const chunksAdded = await addChunksToWeaviate(client, chunks, filename);
+    // Chunk the text
+    const chunks = chunkText(text, {
+      chunkSize: 1000,
+      chunkOverlap: 200,
+    });
 
-  return { chunksAdded };
+    // Ensure collection exists
+    if (!await ensureCollectionExists(collectionName)) {
+      await createCollection(client, collectionName);
+    }
+
+    // Add chunks to Weaviate
+    const chunksAdded = await addChunksToWeaviate(client, chunks, filename, collectionName);
+
+    return { chunksAdded };
+  }
+  catch (error: unknown) {
+    console.error('Error processing PDF:', error);
+    throw new Error(`Failed to process PDF: ${error instanceof Error ? error.message : 'Unknown error'}`);
+  }
+  finally {
+    await client.close();
+  }
 }
 
-async function ensureCollectionExists(client: any, collectionName: string) {
+async function ensureCollectionExists(collectionName: string): Promise<boolean> {
+  const client = await createWeaviateClient();
   try {
     // Check if collection exists
-    const collections = await client.collections.list();
-
-    if (!collections.find((c: any) => c.name === collectionName)) {
-      // Create collection
-      await client.collections.create({
-        name: collectionName,
-        vectorizer: 'none', // We'll add vectors later if needed
-        properties: [
-          {
-            name: 'content',
-            dataType: 'text',
-          },
-          {
-            name: 'source',
-            dataType: 'text',
-          },
-          {
-            name: 'chunkIndex',
-            dataType: 'int',
-          },
-        ],
-      });
-    }
+    return await client.collections.exists(collectionName);
   }
-  catch (error: any) {
+  catch (error: unknown) {
     // Collection might already exist or there's a connection issue
-    console.warn('Error ensuring collection exists:', error.message);
+    console.warn('Error ensuring collection exists:', error instanceof Error ? error.message : 'Unknown error');
+    return false;
+  }
+  finally {
+    await client.close();
   }
 }
 
 async function addChunksToWeaviate(
-  client: any,
+  client: WeaviateClient,
   chunks: string[],
   source: string,
+  collectionName: string,
 ): Promise<number> {
   try {
-    const collection = client.collections.get('Documents');
+    // Ensure collection exists
+    if (!await ensureCollectionExists(collectionName)) {
+      throw new Error(`Collection ${collectionName} does not exist`);
+    }
+
+    const collection = client.collections.use(collectionName);
 
     const objects = chunks.map((chunk, index) => ({
       content: chunk,
@@ -93,29 +91,58 @@ async function addChunksToWeaviate(
 
     return inserted;
   }
-  catch (error: any) {
+  catch (error: unknown) {
     console.error('Error adding chunks to Weaviate:', error);
-    throw new Error(`Failed to add chunks to Weaviate: ${error.message}`);
+    throw new Error(`Failed to add chunks to Weaviate: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
 }
 
 export async function createWeaviateClient() {
-  // Using Weaviate JavaScript client v4
-  try {
-    const { WeaviateClient } = await import('weaviate-ts-client');
-
-    return WeaviateClient.client({
-      scheme: 'http',
+  const client: WeaviateClient = await weaviate.connectToLocal(
+    {
       host: WEAVIATE_URL.replace('http://', '').replace('https://', ''),
-    });
+      port: 8080,
+      authCredentials: new weaviate.ApiKey(weaviateApiKey),
+    },
+  );
+
+  const clientReadiness = await client.isReady();
+  if (!clientReadiness) {
+    throw new Error('Weaviate client is not ready');
   }
-  catch (error) {
-    // Fallback: use fetch API directly
-    return createSimpleWeaviateClient();
-  }
+
+  console.log('Weaviate client is ready');
+
+  return client;
 }
 
-function createSimpleWeaviateClient() {
+export async function createCollection(client: WeaviateClient, collectionName: string) {
+  const collection = await client.collections.create({
+    name: collectionName,
+    vectorizers: vectors.text2VecWeaviate(),
+  });
+  return collection;
+}
+
+export async function queryWeaviate(query: string, collectionName: string) {
+  const client = await createWeaviateClient();
+
+  const collection = client.collections.use(collectionName);
+
+  const result = await collection.query.nearText(query, {
+
+    certainty: 0.7,
+    limit: 10,
+  });
+
+  result.objects.forEach((item) => {
+    console.log(JSON.stringify(item.properties, null, 2));
+  });
+
+  return result;
+}
+
+/* function createSimpleWeaviateClient() {
   const weaviateHost = WEAVIATE_URL.replace('http://', '').replace('https://', '').split(':')[0];
   const weaviatePort = WEAVIATE_URL.includes(':8080') ? '8080' : '80';
   const baseUrl = `http://${weaviateHost}:${weaviatePort}`;
@@ -170,4 +197,4 @@ function createSimpleWeaviateClient() {
       },
     },
   };
-}
+} */
