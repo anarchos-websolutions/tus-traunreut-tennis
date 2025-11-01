@@ -44,6 +44,7 @@ services:
       QUERY_DEFAULTS_LIMIT: 25
       AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
       PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+      ENABLE_MODULES: 'text2vec-ollama,generative-ollama'
       CLUSTER_HOSTNAME: 'node1'
 
   ollama:
@@ -60,6 +61,8 @@ services:
         ollama serve &
         sleep 5
         ollama pull qwen3:4b || true
+        ollama pull llama3.2 || true
+        ollama pull nomic-embed-text || true
         wait
     restart: on-failure:0
 

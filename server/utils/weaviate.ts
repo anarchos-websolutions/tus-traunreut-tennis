@@ -2,9 +2,9 @@ import type { WeaviateClient } from 'weaviate-client';
 import weaviate, { vectors } from 'weaviate-client';
 
 // Default to 'weaviate' hostname for Docker, fallback to localhost for local dev
-const WEAVIATE_HOST = useRuntimeConfig().weaviateHost as string || (process.env.NODE_ENV === 'production' ? 'weaviate' : 'localhost');
+/* const WEAVIATE_HOST = useRuntimeConfig().weaviateHost as string || (process.env.NODE_ENV === 'production' ? 'weaviate' : 'localhost');
 const WEAVIATE_URL = useRuntimeConfig().weaviateUrl as string || `http://${WEAVIATE_HOST}:8080`;
-const weaviateApiKey = useRuntimeConfig().weaviateApiKey as string;
+const weaviateApiKey = useRuntimeConfig().weaviateApiKey as string; */
 
 export async function processPDFAndAddToWeaviate(
   pdfBuffer: Buffer,
@@ -98,13 +98,7 @@ async function addChunksToWeaviate(
 }
 
 export async function createWeaviateClient() {
-  const client: WeaviateClient = await weaviate.connectToLocal(
-    {
-      host: WEAVIATE_URL.replace('http://', '').replace('https://', ''),
-      port: 8080,
-      authCredentials: new weaviate.ApiKey(weaviateApiKey),
-    },
-  );
+  const client: WeaviateClient = await weaviate.connectToLocal();
 
   const clientReadiness = await client.isReady();
   if (!clientReadiness) {
@@ -141,60 +135,3 @@ export async function queryWeaviate(query: string, collectionName: string) {
 
   return result;
 }
-
-/* function createSimpleWeaviateClient() {
-  const weaviateHost = WEAVIATE_URL.replace('http://', '').replace('https://', '').split(':')[0];
-  const weaviatePort = WEAVIATE_URL.includes(':8080') ? '8080' : '80';
-  const baseUrl = `http://${weaviateHost}:${weaviatePort}`;
-
-  // Simple client using fetch API for Weaviate v1
-  return {
-    collections: {
-      list: async () => {
-        const response = await fetch(`${baseUrl}/v1/schema`);
-        if (!response.ok) {
-          const error = await response.text();
-          throw new Error(`Failed to list collections: ${error}`);
-        }
-        const schema = await response.json();
-        return (schema.classes || []).map((c: any) => ({ name: c.class }));
-      },
-      get: (name: string) => ({
-        data: {
-          insertMany: async (objects: any[]) => {
-            // Weaviate v1 API expects individual POST requests
-            for (const obj of objects) {
-              const response = await fetch(`${baseUrl}/v1/objects`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                  class: name,
-                  properties: obj,
-                }),
-              });
-              if (!response.ok) {
-                const error = await response.text();
-                throw new Error(`Failed to insert object: ${error}`);
-              }
-            }
-          },
-        },
-      }),
-      create: async (config: any) => {
-        const response = await fetch(`${baseUrl}/v1/schema`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            class: config.name,
-            vectorizer: config.vectorizer || 'none',
-            properties: config.properties,
-          }),
-        });
-        if (!response.ok) {
-          const error = await response.text();
-          throw new Error(`Failed to create collection: ${error}`);
-        }
-      },
-    },
-  };
-} */

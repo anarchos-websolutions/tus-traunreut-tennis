@@ -48,11 +48,11 @@ export default defineEventHandler(async (event) => {
       chunksAdded: result.chunksAdded,
     };
   }
-  catch (error: any) {
+  catch (error: unknown) {
     console.error('Error processing PDF:', error);
     throw createError({
       statusCode: 500,
-      statusMessage: error?.message || 'Failed to process PDF',
+      statusMessage: error instanceof Error ? error.message : 'Failed to process PDF',
     });
   }
 });
